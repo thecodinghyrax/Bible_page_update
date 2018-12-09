@@ -17,7 +17,7 @@ var version = "NIV";
 // Not sure how to make the main() function run with out first calling the requests.onload function. I seem to be stuck in...I'm thinking that using globals would be a solution but I am
 // told not to use them. I just can't figure a way around it. 
 function getJsonFile(textYear){
-    var requestURL = "https://raw.githubusercontent.com/thecodinghyrax/gh-pages/master/final" + textYear + ".json"
+    var requestURL = "https://raw.githubusercontent.com/thecodinghyrax/Bible_page_update_2019/master/final" + textYear + ".json"
     var request = new XMLHttpRequest();
     request.open('GET', requestURL)
     request.responseType = 'json';
