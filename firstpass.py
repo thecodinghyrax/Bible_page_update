@@ -30,6 +30,7 @@ with open(fileIn, 'r', encoding="ascii", errors="surrogateescape") as f:
     data = data.replace('\udce2\udc80\udca0', '')
     data = data.replace('\udce2\udc80\udc98', "\'")
     data = data.replace('\"', '\\"')
+    data = data.replace('(NIV)', '')
    
     #Remove the next two when done - This allows you to search the output text for "\" and find 
     #the offending markings

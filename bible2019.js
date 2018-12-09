@@ -1,8 +1,12 @@
+//In stead of storing some of the vlaues in global (day, year) it might be possible
+// to put those in an object instead....must do more research. Goodnight me
+
+
 //This sets the value of the day to today's "Day number"(current day number)
 var today = new Date()
 console.log(today);
 var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
-day = 6 // For testing. Comment out when go live.
+//day = 6 // For testing. Comment out when go live.
 year = today.getFullYear();
 year = 2017 // For testing. Comment out when go live.
 console.log("Today is day : " + day);
@@ -193,7 +197,7 @@ function sevenLineDay(currentDayEntry){
 }
 
 // The will handle all HTML for a JSON entry with eigth lines - Please note....this is still broken
-function eightLineDay(currentDayEntry){//might want to consider parsing the "Watchword" and "Ascension" onto a seperate line and joining all verses. Todo
+function eightLineDay(currentDayEntry){
     //This is a reset of the body
     var body = document.querySelector("body");
     body.innerHTML = '';
@@ -228,13 +232,15 @@ function eightLineDay(currentDayEntry){//might want to consider parsing the "Wat
 }
 
 // The will handle all HTML for a JSON entry with nine lines - Please note....this is still broken
-function nineLineDay(currentDayEntry){//might want to consider parsing the "Watchword" and "Ascension" onto a seperate line and joining all verses. Todo
+function nineLineDay(currentDayEntry){
     //This is a reset of the body
     var body = document.querySelector("body");
     body.innerHTML = '';
     // Handeling line 1
     textOnlyH1(currentDayEntry["line1"][0]);
     // Handeling line 2
+    dateLine(currentDayEntry["line3"]);
+    // Handeling line 3
     if (currentDayEntry["line2"].length <= 1){
         console.log("This currentDayEntry has no real entry for line2");
         textOnlyH2(currentDayEntry["line2"][0]);
@@ -244,24 +250,22 @@ function nineLineDay(currentDayEntry){//might want to consider parsing the "Watc
         console.log(currentDayEntry["line2"]);
         console.log(currentDayEntry["line2"].slice(1));
     }
-    // Handeling line 3
-    dateLine(currentDayEntry["line3"]);
     // Handeling line 4
     sectionHeading("Daily Scripture Lessions");
     verseLine(currentDayEntry["line4"]);
     // Handeling line 5
-    verseLine(currentDayEntry["line5"]);//This will need to be fixed in the Parser. "Watchword" stuff will need to be striped. Todo
+    sectionHeading(currentDayEntry["line5"][0]);
     // Handeling line 6
     verseLine(currentDayEntry["line6"]);
     // Handeling line 7
     sectionHeading("Watchword For the Day");
-    textAndVerse(currentDayEntry["line7"]);
+    textOnly(currentDayEntry["line7"][0]);
     // Handeling line 8
     sectionHeading("Doctrinal Text");
-    textAndVerse(currentDayEntry["line8"]);
+    textOnly(currentDayEntry["line8"][0]);
     // Handeling line 9
     sectionHeading("Prayer");
-    textOnly(currentDayEntry["line9"]);
+    textOnly(currentDayEntry["line9"][0]);
 }
 
 var request = getJsonFile(year);
