@@ -60,7 +60,8 @@ def split_seven_entires():
                 line_list.append(data["dayText"][day]["line1"])
                 data["dayText"][day]["line1"] = line_list
                 line_list = []
-                line_list.append(data["dayText"][day]["line2"])
+                removeWatchWord = data["dayText"][day]["line2"].replace("Watchword for the Week - ", "")
+                line_list.append(removeWatchWord)
                 data["dayText"][day]["line2"] = line_list
                 line_list = []
                 line_list.append(data["dayText"][day]["line3"])

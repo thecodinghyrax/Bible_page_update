@@ -147,18 +147,18 @@ function sixLineDay(currentDayEntry){
     var body = document.querySelector("body");
     body.innerHTML = '';
     // Handeling line 1
-    textOnlyH1(currentDayEntry["line1"]);
+    textOnlyH1(currentDayEntry["line1"][0]);
     // Handeling line 2
-    dateLine(currentDayEntry["line2"]);
+    dateLine(currentDayEntry["line2"][0]);
     // Handeling line 3
     sectionHeading("Daily Scripture Lessions");
     verseLine(currentDayEntry["line3"]);
     // Handeling line 4
     sectionHeading("Watchword For the Day");
-    textAndVerse(currentDayEntry["line4"]);
+    textOnly(currentDayEntry["line4"]);
     // Handeling line 5
     sectionHeading("Doctrinal Text");
-    textAndVerse(currentDayEntry["line5"]);
+    textOnly(currentDayEntry["line5"]);
     // Handeling line 6
     sectionHeading("Prayer");
     textOnly(currentDayEntry["line6"]);
@@ -170,21 +170,21 @@ function sevenLineDay(currentDayEntry){
     var body = document.querySelector("body");
     body.innerHTML = '';
     // Handeling line 1
-    textOnlyH1(currentDayEntry["line1"]);
+    textOnlyH1(currentDayEntry["line1"][0]);
     // Handeling line 2
-    dateLine(currentDayEntry["line3"]);//order is switched intentionally
+    dateLine(currentDayEntry["line3"][0]);//order is switched intentionally
     // Handeling line 3
     sectionHeading("Watchword for the Week");
-    verseLine(currentDayEntry["line2"]);
+    textOnly(currentDayEntry["line2"][0]);
     // Handeling line 4
     sectionHeading("Daily Scripture Lessions");
     verseLine(currentDayEntry["line4"]);
     // Handeling line 5
     sectionHeading("Watchword For the Day");
-    textAndVerse(currentDayEntry["line5"]);
+    textOnly(currentDayEntry["line5"][0]);
     // Handeling line 6
     sectionHeading("Doctrinal Text");
-    textAndVerse(currentDayEntry["line6"]);
+    textOnly(currentDayEntry["line6"]);
     // Handeling line 7
     sectionHeading("Prayer");
     textOnly(currentDayEntry["line7"]);
@@ -254,16 +254,16 @@ request.onload = function() { //Add a function to check for line_count and call 
     function main(){
     var data = request.response;
     console.log(data);
-    if (data.myObj[day]["line_count"] == 5){
-        fiveLineDay(data.myObj[day]);
-    } else if (data.myObj[day]["line_count"] == 6){
-        sixLineDay(data.myObj[day]);
-    } else if (data.myObj[day]["line_count"] == 7){
-        sevenLineDay(data.myObj[day]);
-    } else if (data.myObj[day]["line_count"] == 8){
-        eightLineDay(data.myObj[day]);
-    } else if (data.myObj[day]["line_count"] == 9){
-        nineLineDay(data.myObj[day]);
+    if (data.dayText[day]["line_count"] == 5){
+        fiveLineDay(data.dayText[day]);
+    } else if (data.dayText[day]["line_count"] == 6){
+        sixLineDay(data.dayText[day]);
+    } else if (data.dayText[day]["line_count"] == 7){
+        sevenLineDay(data.dayText[day]);
+    } else if (data.dayText[day]["line_count"] == 8){
+        eightLineDay(data.dayText[day]);
+    } else if (data.dayText[day]["line_count"] == 9){
+        nineLineDay(data.dayText[day]);
     } else {
         console.log("I have failed to match a line_count for today!")
         }
