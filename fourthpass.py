@@ -111,7 +111,7 @@ def split_nine_entires():
                 line_list.append(data["dayText"][day]["line1"])
                 data["dayText"][day]["line1"] = line_list
                 line_list = []
-                line_list.append(data["dayText"][day]["line2"])
+                line_list = data["dayText"][day]["line2"].split(" - ")
                 data["dayText"][day]["line2"] = line_list
                 line_list = []
                 line_list.append(data["dayText"][day]["line3"])

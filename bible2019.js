@@ -2,7 +2,7 @@
 var today = new Date()
 console.log(today);
 var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
-day = 145 // For testing. Comment out when go live.
+day = 6 // For testing. Comment out when go live.
 year = today.getFullYear();
 year = 2017 // For testing. Comment out when go live.
 console.log("Today is day : " + day);
@@ -201,27 +201,30 @@ function eightLineDay(currentDayEntry){//might want to consider parsing the "Wat
     textOnlyH1(currentDayEntry["line1"]);
     // Handeling line 2
     dateLine(currentDayEntry["line3"][0]);//order is switched intentionally
-    // Handeling line 3
-    console.log(currentDayEntry["line3"].length);
-    
+    // Handeling line 3    
     if (currentDayEntry["line2"].length <= 1){
         console.log("This currentDayEntry has no real entry for line2");
     } else {
         sectionHeading(currentDayEntry["line2"][0]);
-        verseLine(currentDayEntry["line2"].slice(1));
+        textOnly(currentDayEntry["line2"][1]);
+        console.log(currentDayEntry["line2"]);
+        console.log(currentDayEntry["line2"].slice(1));
     }
     // Handeling line 4
     sectionHeading("Daily Scripture Lessions");
-    verseLine(currentDayEntry["line4"]);
+    verseLine(currentDayEntry["line3"].slice(1));
     // Handeling line 5
-    sectionHeading("Watchword For the Day");
-    textAndVerse(currentDayEntry["line5"]);
+    sectionHeading(currentDayEntry["line4"][0]);
+    verseLine(currentDayEntry["line5"]);
     // Handeling line 6
+    sectionHeading("Watchword For the Day");
+    textOnly(currentDayEntry["line6"]);
+    // Handeling line 7
     sectionHeading("Doctrinal Text");
-    textAndVerse(currentDayEntry["line6"]);
+    textOnly(currentDayEntry["line7"]);
     // Handeling line 7
     sectionHeading("Prayer");
-    textOnly(currentDayEntry["line7"]);
+    textOnly(currentDayEntry["line8"]);
 }
 
 // The will handle all HTML for a JSON entry with nine lines - Please note....this is still broken
@@ -230,9 +233,17 @@ function nineLineDay(currentDayEntry){//might want to consider parsing the "Watc
     var body = document.querySelector("body");
     body.innerHTML = '';
     // Handeling line 1
-    textOnlyH1(currentDayEntry["line1"]);
+    textOnlyH1(currentDayEntry["line1"][0]);
     // Handeling line 2
-    textOnlyH2("line2")
+    if (currentDayEntry["line2"].length <= 1){
+        console.log("This currentDayEntry has no real entry for line2");
+        textOnlyH2(currentDayEntry["line2"][0]);
+    } else {
+        sectionHeading(currentDayEntry["line2"][0]);
+        textOnly(currentDayEntry["line2"][1]);
+        console.log(currentDayEntry["line2"]);
+        console.log(currentDayEntry["line2"].slice(1));
+    }
     // Handeling line 3
     dateLine(currentDayEntry["line3"]);
     // Handeling line 4
