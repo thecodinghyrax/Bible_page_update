@@ -1,6 +1,6 @@
+// Going to leave this in here incase anything changes in the future. As of now, no verse links suggest a different translation.
 // Default bible version to use
-//var version = "NIV";
-// Going to leave this in here incase anything changes in the future. As of now, no verse links suggest a different translation
+// var version = "NIV";
 // This will take a verse, check for and handle an alternative translation and return a biblegateway link to use as an attribute. 
 // function createLink(verse){
 //     var gatewayLinkMain = "https://www.biblegateway.com/passage/?search=";
@@ -31,8 +31,7 @@ function dateLine(line){
 }
 
 // Creates an HTML line for each verse in a verse line
-function verseLine (line){
-        
+function verseLine (line){    
         for (var j = 0; j < line.length; j++){
             var para = document.createElement("p");
             var span = document.createElement("span");
@@ -47,7 +46,6 @@ function verseLine (line){
             para.appendChild(tab);
             document.querySelector("body").appendChild(para);
             }
-        
         //version = "NIV";
         }
 
@@ -252,11 +250,9 @@ function nineLineDay(currentDayEntry){
 var today = new Date()
 console.log(today);
 var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
-day = 365 // For testing. Comment out when go live.
+//day = 365 // For testing. Comment out when go live.
 var year = today.getFullYear();
 year = 2017 // For testing. Comment out when go live.
-// console.log("Today is day : " + day);
-// console.log("This year is : " + year);
 
 var defaults = {
     year : year,
@@ -264,11 +260,8 @@ var defaults = {
 }
 
 
-// This is the request function. I only moved it into a funtion to try to reuse it. So far, I can not figure a way to call this with a different "textYear" and retreive a new JSON file.
-// I now have three JSON files on github to test this. final2016.json, final2017.json and final2019.json. They are all copies of final2017.json
-// I am using the onclick button functions to change the day and year function but I think that the scope of that change is local to the main() function inside of the requests.onload function
-// Not sure how to make the main() function run with out first calling the requests.onload function. I seem to be stuck in...I'm thinking that using globals would be a solution but I am
-// told not to use them. I just can't figure a way around it. 
+// This is the request function. This will pull in the data from github with a file name that
+// matches final<year>.json
 function getJsonFile(textYear){
     var requestURL = "https://raw.githubusercontent.com/thecodinghyrax/Bible_page_update_2019/master/final" + textYear + ".json"
     var request = new XMLHttpRequest();
@@ -285,10 +278,9 @@ var request = getJsonFile(mainYear);
 //This is where all the functions are called after the JSON is requested and loaded
 request.onload = function() {
     
-    // Main function handles all of the other function calls. This will be recalled after the "next" and/or "previous" buttons are clicked
-    //function main(){
+    // Main function handles all of the other function calls. 
+    // This will be recalled after the "next" and/or "previous" buttons are clicked
     var data = request.response;
-    //console.log("The data object contains : " + data);
     if (data.dayText[defaults.day]["line_count"] == 5){
         fiveLineDay(data.dayText[defaults.day]);
     } else if (data.dayText[defaults.day]["line_count"] == 6){
@@ -360,11 +352,12 @@ request.onload = function() {
         console.log("The year is now = " + defaults.year);
         main(defaults.year);};
   
-  //};
-};// main() close???
-    // Initial call of the main() function
+};// main()
+    
 
 
 }
+
+// Initial call of the main() function
 main(defaults.year);
 console.log("This is the end of the js. defaults.year = " + defaults.year);
