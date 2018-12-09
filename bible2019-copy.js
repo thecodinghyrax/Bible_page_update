@@ -1,37 +1,59 @@
+//In stead of storing some of the vlaues in global (day, year) it might be possible
+// to put those in an object instead....must do more research. Goodnight me
+
+
 //This sets the value of the day to today's "Day number"(current day number)
 var today = new Date()
-var version = "NIV";
 console.log(today);
-
-
-
 var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
-//day = 365 // For testing. Comment out when go live.
-year = today.getFullYear();
+day = 1 // For testing. Comment out when go live.
+var year = today.getFullYear();
 year = 2017 // For testing. Comment out when go live.
-console.log("The start day of the year is : " + day);
-console.log("The start year is : " + year);
-
-var requestURL = "https://raw.githubusercontent.com/thecodinghyrax/gh-pages/master/final" + year + ".json"
-var request = new XMLHttpRequest();
-request.open('GET', requestURL)
-request.responseType = 'json';
-request.send();
+console.log("Today is day : " + day);
+console.log("This year is : " + year);
 
 
+
+// This is the request function. I only moved it into a funtion to try to reuse it. So far, I can not figure a way to call this with a different "textYear" and retreive a new JSON file.
+// I now have three JSON files on github to test this. final2016.json, final2017.json and final2019.json. They are all copies of final2017.json
+// I am using the onclick button functions to change the day and year function but I think that the scope of that change is local to the main() function inside of the requests.onload function
+// Not sure how to make the main() function run with out first calling the requests.onload function. I seem to be stuck in...I'm thinking that using globals would be a solution but I am
+// told not to use them. I just can't figure a way around it. 
+function getJsonFile(textYear){
+    var requestURL = "https://raw.githubusercontent.com/thecodinghyrax/Bible_page_update_2019/master/final" + textYear + ".json"
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL)
+    request.responseType = 'json';
+    request.send();
+    return request
+}
+
+
+// Default bible version to use
+//var version = "NIV";
+// Going to leave this in here incase anything changes in the future. As of now, no verse links suggest a different translation
+// This will take a verse, check for and handle an alternative translation and return a biblegateway link to use as an attribute. 
+// function createLink(verse){
+//     var gatewayLinkMain = "https://www.biblegateway.com/passage/?search=";
+//     if (verse.includes("(")){
+//       verse = verse.split("(");
+//       verse[1].replace(")", "");
+//       link = gatewayLinkMain + verse[0] + "&version=" + verse[1];
+//     }
+//     else {
+//       link = gatewayLinkMain + verse + "&version=" + version;
+//     }
+//     return link
+// }
+
+// This creates a link from the supplied verse. Assmuptions - They will always want the NIV translation.
 function createLink(verse){
     var gatewayLinkMain = "https://www.biblegateway.com/passage/?search=";
-    if (verse.includes("(")){
-      verse = verse.split("(");
-      verse[1].replace(")", "");
-      link = gatewayLinkMain + verse[0] + "&version=" + verse[1];
-    }
-    else {
-      link = gatewayLinkMain + verse + "&version=" + version;
-    }
+      link = gatewayLinkMain + verse + "&version=NIV";
     return link
 }
 
+// Creates an HTML line for date text
 function dateLine(line){
     var line1 = document.createElement("h2");
     var text1 = document.createTextNode("Daily Text - " + line);
@@ -39,9 +61,11 @@ function dateLine(line){
     document.querySelector("body").appendChild(line1);
 }
 
+// Creates an HTML line for each verse in a verse line
 function verseLine (line){
-        var para = document.createElement("p");
+        
         for (var j = 0; j < line.length; j++){
+            var para = document.createElement("p");
             var span = document.createElement("span");
             var anchor = document.createElement("a");
             var text = document.createTextNode(line[j]);
@@ -52,11 +76,13 @@ function verseLine (line){
             span.appendChild(anchor);
             para.appendChild(span);
             para.appendChild(tab);
+            document.querySelector("body").appendChild(para);
             }
-        document.querySelector("body").appendChild(para);
-        version = "NIV";
+        
+        //version = "NIV";
         }
 
+// Creates an HTML line for a text line that contains text + verse. 
 function textAndVerse(line) {
     var para = document.createElement("p");
     var span = document.createElement("span");
@@ -78,6 +104,7 @@ function textAndVerse(line) {
     
 }
 
+// Creates an HTML line for text only
 function textOnly(line){
     var para = document.createElement("p");
     var text = document.createTextNode(line);
@@ -85,6 +112,7 @@ function textOnly(line){
     document.querySelector("body").appendChild(para);
 }
 
+// Creates an h3 section heading with text passed as "heading"
 function sectionHeading(heading){
     var heading2 = document.createElement("h3");
     var text = document.createTextNode(heading);
@@ -92,6 +120,7 @@ function sectionHeading(heading){
     document.querySelector("body").appendChild(heading2);
 }
 
+// Creates an h1 section heading with text passed as "line"
 function textOnlyH1(line){
     var para = document.createElement("h1");
     var text = document.createTextNode(line);
@@ -99,6 +128,7 @@ function textOnlyH1(line){
     document.querySelector("body").appendChild(para);
 }
 
+// Creates an h2 section heading with text passed as "line"
 function textOnlyH2(line){
     var para = document.createElement("h2");
     var text = document.createTextNode(line);
@@ -106,146 +136,174 @@ function textOnlyH2(line){
     document.querySelector("body").appendChild(para);
 }
 
+// The will handle all HTML for a JSON entry with five lines
 function fiveLineDay(currentDayEntry){
-    //This is a reset of the body
+    //This is a reset of the HTML body
     var body = document.querySelector("body");
     body.innerHTML = '';
     // Handeling line 1
-    dateLine(currentDayEntry["line1"]);
+    dateLine(currentDayEntry["line1"][0]);    
     // Handeling line 2
     sectionHeading("Daily Scripture Lessions");
     verseLine(currentDayEntry["line2"]);
     // Handeling line 3
     sectionHeading("Watchword For the Day");
-    textAndVerse(currentDayEntry["line3"]);
+    textOnly(currentDayEntry["line3"][0]);
     // Handeling line 4
     sectionHeading("Doctrinal Text");
-    textAndVerse(currentDayEntry["line4"]);
+    textOnly(currentDayEntry["line4"][0]);
     // Handeling line 5
     sectionHeading("Prayer");
-    textOnly(currentDayEntry["line5"]);
+    textOnly(currentDayEntry["line5"][0]);
 }
 
+// The will handle all HTML for a JSON entry with six lines
 function sixLineDay(currentDayEntry){
     //This is a reset of the body
     var body = document.querySelector("body");
     body.innerHTML = '';
     // Handeling line 1
-    textOnlyH1(currentDayEntry["line1"]);
+    textOnlyH1(currentDayEntry["line1"][0]);
     // Handeling line 2
-    dateLine(currentDayEntry["line2"]);
+    dateLine(currentDayEntry["line2"][0]);
     // Handeling line 3
     sectionHeading("Daily Scripture Lessions");
     verseLine(currentDayEntry["line3"]);
     // Handeling line 4
     sectionHeading("Watchword For the Day");
-    textAndVerse(currentDayEntry["line4"]);
+    textOnly(currentDayEntry["line4"]);
     // Handeling line 5
     sectionHeading("Doctrinal Text");
-    textAndVerse(currentDayEntry["line5"]);
+    textOnly(currentDayEntry["line5"]);
     // Handeling line 6
     sectionHeading("Prayer");
     textOnly(currentDayEntry["line6"]);
 }
 
+// The will handle all HTML for a JSON entry with seven lines
 function sevenLineDay(currentDayEntry){
     //This is a reset of the body
     var body = document.querySelector("body");
     body.innerHTML = '';
     // Handeling line 1
-    textOnlyH1(currentDayEntry["line1"]);
+    textOnlyH1(currentDayEntry["line1"][0]);
     // Handeling line 2
-    dateLine(currentDayEntry["line3"]);//order is switched intentionally
+    dateLine(currentDayEntry["line3"][0]);//order is switched intentionally
     // Handeling line 3
     sectionHeading("Watchword for the Week");
-    verseLine(currentDayEntry["line2"]);//This will need to be fixed in the Parser. "Watchword" stuff will need to be striped. Todo
+    textOnly(currentDayEntry["line2"][0]);
     // Handeling line 4
     sectionHeading("Daily Scripture Lessions");
     verseLine(currentDayEntry["line4"]);
     // Handeling line 5
     sectionHeading("Watchword For the Day");
-    textAndVerse(currentDayEntry["line5"]);
+    textOnly(currentDayEntry["line5"][0]);
     // Handeling line 6
     sectionHeading("Doctrinal Text");
-    textAndVerse(currentDayEntry["line6"]);
+    textOnly(currentDayEntry["line6"]);
     // Handeling line 7
     sectionHeading("Prayer");
     textOnly(currentDayEntry["line7"]);
 }
 
-function eightLineDay(currentDayEntry){//might want to consider parsing the "Watchword" and "Ascension" onto a seperate line and joining all verses. Todo
+// The will handle all HTML for a JSON entry with eigth lines - Please note....this is still broken
+function eightLineDay(currentDayEntry){
     //This is a reset of the body
     var body = document.querySelector("body");
     body.innerHTML = '';
     // Handeling line 1
     textOnlyH1(currentDayEntry["line1"]);
     // Handeling line 2
-    dateLine(currentDayEntry["line3"]);//order is switched intentionally
-    // Handeling line 3
-    sectionHeading("Watchword for the Ascension");
-    verseLine(currentDayEntry["line2"]);//This will need to be fixed in the Parser. "Watchword" stuff will need to be striped. Todo
+    dateLine(currentDayEntry["line3"][0]);//order is switched intentionally
+    // Handeling line 3    
+    if (currentDayEntry["line2"].length <= 1){
+        console.log("This currentDayEntry has no real entry for line2");
+    } else {
+        sectionHeading(currentDayEntry["line2"][0]);
+        textOnly(currentDayEntry["line2"][1]);
+        console.log(currentDayEntry["line2"]);
+        console.log(currentDayEntry["line2"].slice(1));
+    }
     // Handeling line 4
     sectionHeading("Daily Scripture Lessions");
-    verseLine(currentDayEntry["line4"]);
+    verseLine(currentDayEntry["line3"].slice(1));
     // Handeling line 5
-    sectionHeading("Watchword For the Day");
-    textAndVerse(currentDayEntry["line5"]);
+    sectionHeading(currentDayEntry["line4"][0]);
+    verseLine(currentDayEntry["line5"]);
     // Handeling line 6
+    sectionHeading("Watchword For the Day");
+    textOnly(currentDayEntry["line6"]);
+    // Handeling line 7
     sectionHeading("Doctrinal Text");
-    textAndVerse(currentDayEntry["line6"]);
+    textOnly(currentDayEntry["line7"]);
     // Handeling line 7
     sectionHeading("Prayer");
-    textOnly(currentDayEntry["line7"]);
+    textOnly(currentDayEntry["line8"]);
 }
 
-function nineLineDay(currentDayEntry){//might want to consider parsing the "Watchword" and "Ascension" onto a seperate line and joining all verses. Todo
+// The will handle all HTML for a JSON entry with nine lines - Please note....this is still broken
+function nineLineDay(currentDayEntry){
     //This is a reset of the body
     var body = document.querySelector("body");
     body.innerHTML = '';
     // Handeling line 1
-    textOnlyH1(currentDayEntry["line1"]);
+    textOnlyH1(currentDayEntry["line1"][0]);
     // Handeling line 2
-    textOnlyH2("line2")
-    // Handeling line 3
     dateLine(currentDayEntry["line3"]);
+    // Handeling line 3
+    if (currentDayEntry["line2"].length <= 1){
+        console.log("This currentDayEntry has no real entry for line2");
+        textOnlyH2(currentDayEntry["line2"][0]);
+    } else {
+        sectionHeading(currentDayEntry["line2"][0]);
+        textOnly(currentDayEntry["line2"][1]);
+        console.log(currentDayEntry["line2"]);
+        console.log(currentDayEntry["line2"].slice(1));
+    }
     // Handeling line 4
     sectionHeading("Daily Scripture Lessions");
     verseLine(currentDayEntry["line4"]);
     // Handeling line 5
-    verseLine(currentDayEntry["line5"]);//This will need to be fixed in the Parser. "Watchword" stuff will need to be striped. Todo
+    sectionHeading(currentDayEntry["line5"][0]);
     // Handeling line 6
     verseLine(currentDayEntry["line6"]);
     // Handeling line 7
     sectionHeading("Watchword For the Day");
-    textAndVerse(currentDayEntry["line7"]);
+    textOnly(currentDayEntry["line7"][0]);
     // Handeling line 8
     sectionHeading("Doctrinal Text");
-    textAndVerse(currentDayEntry["line8"]);
+    textOnly(currentDayEntry["line8"][0]);
     // Handeling line 9
     sectionHeading("Prayer");
-    textOnly(currentDayEntry["line9"]);
+    textOnly(currentDayEntry["line9"][0]);
 }
-//This is where all the functions are called
-request.onload = function() { //Add a function to check for line_count and call the approiate day function. Todo
+
+
+
+var request = getJsonFile(year);
+
+//This is where all the functions are called after the JSON is requested and loaded
+request.onload = function() {
     
-    
+    // Main function handles all of the other function calls. This will be recalled after the "next" and/or "previous" buttons are clicked
     function main(){
     var data = request.response;
-    console.log(data);
-    if (data.myObj[day]["line_count"] == 5){
-        fiveLineDay(data.myObj[day]);
-    } else if (data.myObj[day]["line_count"] == 6){
-        sixLineDay(data.myObj[day]);
-    } else if (data.myObj[day]["line_count"] == 7){
-        sevenLineDay(data.myObj[day]);
-    } else if (data.myObj[day]["line_count"] == 8){
-        eightLineDay(data.myObj[day]);
-    } else if (data.myObj[day]["line_count"] == 9){
-        nineLineDay(data.myObj[day]);
+    //console.log("The data object contains : " + data);
+    if (data.dayText[day]["line_count"] == 5){
+        fiveLineDay(data.dayText[day]);
+    } else if (data.dayText[day]["line_count"] == 6){
+        sixLineDay(data.dayText[day]);
+    } else if (data.dayText[day]["line_count"] == 7){
+        sevenLineDay(data.dayText[day]);
+    } else if (data.dayText[day]["line_count"] == 8){
+        eightLineDay(data.dayText[day]);
+    } else if (data.dayText[day]["line_count"] == 9){
+        nineLineDay(data.dayText[day]);
     } else {
         console.log("I have failed to match a line_count for today!")
         }
-
+    
+    // This is creating the buttons and adding them to the HTML
     var div = document.createElement("div");
     var buttonPrevious = document.createElement("button");
     buttonPrevious.setAttribute("id", "previous");
@@ -259,20 +317,21 @@ request.onload = function() { //Add a function to check for line_count and call 
     
 
     //Hides the previous button if date entry is not found (null) This would happen if you were at the first entry
-    if (day <= 1 && year <= 2016){//This will need to be changed everytime a new year file is added. Todo
+    if (day <= 1 && year <= 2016){
         document.getElementById("previous").style.visibility = "hidden";
     } else {
         document.getElementById("previous").style.visibility = "visible";
     };
     
-    //Hides the next button if current day is displayed
-    if (day >= 365 && year == 2018){ //This will need to be changed after go live. Todo
+    //Hides the next button if current day is the last day in the last JSON file
+    if (day >= 365 && year == 2018){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
         document.getElementById("next").style.visibility = "hidden";
     } else {
         document.getElementById("next").style.visibility = "visible";
     };
     
-    //defines button function. when pressed-increment or decrement the navCounter and reloads the main function
+    // Defines button function. When pressed - decrement the day and reloads the main function or
+    // decraments the year and resets the day if it is the first day of the year
     document.getElementById("previous").onclick = function () {
         if (day == 1){
             year -= 1;
@@ -282,9 +341,11 @@ request.onload = function() { //Add a function to check for line_count and call 
         } else {
             day -= 1;
         } 
-            
-        
-        main(); };
+        main(); 
+        };
+
+    // Defines button function. When pressed - advances the day and reloads the main function or
+    // advances the year and resets the day if it is the last day of the year
     document.getElementById("next").onclick = function () {
         if (day == 365){
             year += 1;
@@ -301,6 +362,7 @@ request.onload = function() { //Add a function to check for line_count and call 
   
   };
     
+    // Initial call of the main() function
     main();    
 
 }

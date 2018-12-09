@@ -6,14 +6,19 @@
 var today = new Date()
 console.log(today);
 var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
-//day = 6 // For testing. Comment out when go live.
-year = today.getFullYear();
+//day = 1 // For testing. Comment out when go live.
+var year = today.getFullYear();
 year = 2017 // For testing. Comment out when go live.
-console.log("Today is day : " + day);
-console.log("This year is : " + year);
+// console.log("Today is day : " + day);
+// console.log("This year is : " + year);
 
-// Default bible version to use
-var version = "NIV";
+var defaults = {
+    year : year,
+    day : day
+}
+
+
+
 
 // This is the request function. I only moved it into a funtion to try to reuse it. So far, I can not figure a way to call this with a different "textYear" and retreive a new JSON file.
 // I now have three JSON files on github to test this. final2016.json, final2017.json and final2019.json. They are all copies of final2017.json
@@ -29,17 +34,28 @@ function getJsonFile(textYear){
     return request
 }
 
+
+// Default bible version to use
+//var version = "NIV";
+// Going to leave this in here incase anything changes in the future. As of now, no verse links suggest a different translation
 // This will take a verse, check for and handle an alternative translation and return a biblegateway link to use as an attribute. 
+// function createLink(verse){
+//     var gatewayLinkMain = "https://www.biblegateway.com/passage/?search=";
+//     if (verse.includes("(")){
+//       verse = verse.split("(");
+//       verse[1].replace(")", "");
+//       link = gatewayLinkMain + verse[0] + "&version=" + verse[1];
+//     }
+//     else {
+//       link = gatewayLinkMain + verse + "&version=" + version;
+//     }
+//     return link
+// }
+
+// This creates a link from the supplied verse. Assmuptions - They will always want the NIV translation.
 function createLink(verse){
     var gatewayLinkMain = "https://www.biblegateway.com/passage/?search=";
-    if (verse.includes("(")){
-      verse = verse.split("(");
-      verse[1].replace(")", "");
-      link = gatewayLinkMain + verse[0] + "&version=" + verse[1];
-    }
-    else {
-      link = gatewayLinkMain + verse + "&version=" + version;
-    }
+      link = gatewayLinkMain + verse + "&version=NIV";
     return link
 }
 
@@ -69,30 +85,31 @@ function verseLine (line){
             document.querySelector("body").appendChild(para);
             }
         
-        version = "NIV";
+        //version = "NIV";
         }
 
+// Leaving this in although its unused at this time. 
 // Creates an HTML line for a text line that contains text + verse. 
-function textAndVerse(line) {
-    var para = document.createElement("p");
-    var span = document.createElement("span");
-    var verseSpan = document.createElement("span");
-    var anchor = document.createElement("a");
-    var text = document.createTextNode(line[0]);
-    var verseText = document.createTextNode(line[1]);
-    var tab = document.createTextNode("\t\t");
+// function textAndVerse(line) {
+//     var para = document.createElement("p");
+//     var span = document.createElement("span");
+//     var verseSpan = document.createElement("span");
+//     var anchor = document.createElement("a");
+//     var text = document.createTextNode(line[0]);
+//     var verseText = document.createTextNode(line[1]);
+//     var tab = document.createTextNode("\t\t");
 
-    span.appendChild(text);
-    para.appendChild(span);
-    anchor.appendChild(verseText);
-    anchor.setAttribute("href", createLink(line[1]));
-    anchor.setAttribute("target", "_blank");
-    verseSpan.appendChild(anchor);
-    para.appendChild(verseSpan);
-    document.querySelector("body").appendChild(para);
-    version = "NIV";
+//     span.appendChild(text);
+//     para.appendChild(span);
+//     anchor.appendChild(verseText);
+//     anchor.setAttribute("href", createLink(line[1]));
+//     anchor.setAttribute("target", "_blank");
+//     verseSpan.appendChild(anchor);
+//     para.appendChild(verseSpan);
+//     document.querySelector("body").appendChild(para);
+//     version = "NIV";
     
-}
+// }
 
 // Creates an HTML line for text only
 function textOnly(line){
@@ -268,25 +285,27 @@ function nineLineDay(currentDayEntry){
     textOnly(currentDayEntry["line9"][0]);
 }
 
-var request = getJsonFile(year);
+
+
+var request = getJsonFile(defaults.year);
 
 //This is where all the functions are called after the JSON is requested and loaded
-request.onload = function() { //Add a function to check for line_count and call the approiate day function. Todo
+request.onload = function() {
     
     // Main function handles all of the other function calls. This will be recalled after the "next" and/or "previous" buttons are clicked
     function main(){
     var data = request.response;
-    console.log(data);
-    if (data.dayText[day]["line_count"] == 5){
-        fiveLineDay(data.dayText[day]);
-    } else if (data.dayText[day]["line_count"] == 6){
-        sixLineDay(data.dayText[day]);
-    } else if (data.dayText[day]["line_count"] == 7){
-        sevenLineDay(data.dayText[day]);
-    } else if (data.dayText[day]["line_count"] == 8){
-        eightLineDay(data.dayText[day]);
-    } else if (data.dayText[day]["line_count"] == 9){
-        nineLineDay(data.dayText[day]);
+    //console.log("The data object contains : " + data);
+    if (data.dayText[defaults.day]["line_count"] == 5){
+        fiveLineDay(data.dayText[defaults.day]);
+    } else if (data.dayText[defaults.day]["line_count"] == 6){
+        sixLineDay(data.dayText[defaults.day]);
+    } else if (data.dayText[defaults.day]["line_count"] == 7){
+        sevenLineDay(data.dayText[defaults.day]);
+    } else if (data.dayText[defaults.day]["line_count"] == 8){
+        eightLineDay(data.dayText[defaults.day]);
+    } else if (data.dayText[defaults.day]["line_count"] == 9){
+        nineLineDay(data.dayText[defaults.day]);
     } else {
         console.log("I have failed to match a line_count for today!")
         }
@@ -305,14 +324,14 @@ request.onload = function() { //Add a function to check for line_count and call 
     
 
     //Hides the previous button if date entry is not found (null) This would happen if you were at the first entry
-    if (day <= 1 && year <= 2016){
+    if (defaults.day <= 1 && defaults.year <= 2016){
         document.getElementById("previous").style.visibility = "hidden";
     } else {
         document.getElementById("previous").style.visibility = "visible";
     };
     
     //Hides the next button if current day is the last day in the last JSON file
-    if (day >= 365 && year == 2018){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
+    if (defaults.day >= 365 && defaults.year == 2018){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
         document.getElementById("next").style.visibility = "hidden";
     } else {
         document.getElementById("next").style.visibility = "visible";
@@ -321,13 +340,13 @@ request.onload = function() { //Add a function to check for line_count and call 
     // Defines button function. When pressed - decrement the day and reloads the main function or
     // decraments the year and resets the day if it is the first day of the year
     document.getElementById("previous").onclick = function () {
-        if (day == 1){
-            year -= 1;
-            day = 365;
-            console.log("The day of the year is now = " + day);
-            console.log("The year is now = " + year);
+        if (defaults.day == 1){
+            defaults.year -= 1;
+            defaults.day = 365;
+            console.log("The day of the year is now = " + defaults.day);
+            console.log("The year is now = " + defaults.year);
         } else {
-            day -= 1;
+            defaults.day -= 1;
         } 
         main(); 
         };
@@ -335,17 +354,17 @@ request.onload = function() { //Add a function to check for line_count and call 
     // Defines button function. When pressed - advances the day and reloads the main function or
     // advances the year and resets the day if it is the last day of the year
     document.getElementById("next").onclick = function () {
-        if (day == 365){
-            year += 1;
-            day = 1
-            console.log("The day of the year is now = " + day);
-            console.log("The year is now = " + year);
+        if (defaults.day == 365){
+            defaults.year += 1;
+            defaults.day = 1
+            console.log("The day of the year is now = " + defaults.day);
+            console.log("The year is now = " + defaults.year);
         } else {
-            day += 1;
+            defaults.day += 1;
         }
        
-        console.log("The day of the year is now = " + day);
-        console.log("The year is now = " + year);
+        console.log("The day of the year is now = " + defaults.day);
+        console.log("The year is now = " + defaults.year);
         main();};
   
   };
