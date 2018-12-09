@@ -2,7 +2,7 @@
 var today = new Date()
 console.log(today);
 var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
-//day = 365 // For testing. Comment out when go live.
+day = 145 // For testing. Comment out when go live.
 year = today.getFullYear();
 year = 2017 // For testing. Comment out when go live.
 console.log("Today is day : " + day);
@@ -49,8 +49,9 @@ function dateLine(line){
 
 // Creates an HTML line for each verse in a verse line
 function verseLine (line){
-        var para = document.createElement("p");
+        
         for (var j = 0; j < line.length; j++){
+            var para = document.createElement("p");
             var span = document.createElement("span");
             var anchor = document.createElement("a");
             var text = document.createTextNode(line[j]);
@@ -61,8 +62,9 @@ function verseLine (line){
             span.appendChild(anchor);
             para.appendChild(span);
             para.appendChild(tab);
+            document.querySelector("body").appendChild(para);
             }
-        document.querySelector("body").appendChild(para);
+        
         version = "NIV";
         }
 
@@ -198,10 +200,16 @@ function eightLineDay(currentDayEntry){//might want to consider parsing the "Wat
     // Handeling line 1
     textOnlyH1(currentDayEntry["line1"]);
     // Handeling line 2
-    dateLine(currentDayEntry["line3"]);//order is switched intentionally
+    dateLine(currentDayEntry["line3"][0]);//order is switched intentionally
     // Handeling line 3
-    sectionHeading("Watchword for the Ascension");
-    verseLine(currentDayEntry["line2"]);//This will need to be fixed in the Parser. "Watchword" stuff will need to be striped. Todo
+    console.log(currentDayEntry["line3"].length);
+    
+    if (currentDayEntry["line2"].length <= 1){
+        console.log("This currentDayEntry has no real entry for line2");
+    } else {
+        sectionHeading(currentDayEntry["line2"][0]);
+        verseLine(currentDayEntry["line2"].slice(1));
+    }
     // Handeling line 4
     sectionHeading("Daily Scripture Lessions");
     verseLine(currentDayEntry["line4"]);
