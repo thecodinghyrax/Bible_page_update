@@ -11,9 +11,15 @@ script, fileIn, = argv
 with open(fileIn, 'r', encoding="ascii", errors="surrogateescape") as f:
     data = f.read()
 
+    #Prints the "raw" data to the terminal output so you can look through it and find the marks that 
+    #don't fit. (Before the replacments)
+    #print(repr(data))
+
     #If a new goofy character is found, run this script on the file and look in the terminal output
     #for something like "\udce2". Then go to the text for that day and try to understand what the 
     #character was supposed to represent and add that "replace" code like below. 
+    
+    
     data = data.replace('\udce2\udc80\udc94', "-")
     data = data.replace('\udce2\udc80\udc93', "-")
     data = data.replace('\udce2\udc80\udc9c', '"')
@@ -32,7 +38,7 @@ with open(fileIn, 'r', encoding="ascii", errors="surrogateescape") as f:
 
     #Prints the "raw" data to the terminal output so you can look through it and find the marks that 
     #don't fit.
-    print(repr(data))
+    #print(repr(data))
 
 with open('firstpassout.txt', 'w', encoding="ascii", errors="surrogateescape") as f:
     f.write(data)

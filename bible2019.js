@@ -5,7 +5,7 @@ var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
 //day = 365 // For testing. Comment out when go live.
 year = today.getFullYear();
 year = 2017 // For testing. Comment out when go live.
-console.log("Today is : " + day);
+console.log("Today is day : " + day);
 console.log("This year is : " + year);
 
 // Default bible version to use
@@ -24,8 +24,6 @@ function getJsonFile(textYear){
     request.send();
     return request
 }
-
-var request = getJsonFile(year);
 
 // This will take a verse, check for and handle an alternative translation and return a biblegateway link to use as an attribute. 
 function createLink(verse){
@@ -128,19 +126,19 @@ function fiveLineDay(currentDayEntry){
     var body = document.querySelector("body");
     body.innerHTML = '';
     // Handeling line 1
-    dateLine(currentDayEntry["line1"]);
+    dateLine(currentDayEntry["line1"][0]);    
     // Handeling line 2
     sectionHeading("Daily Scripture Lessions");
     verseLine(currentDayEntry["line2"]);
     // Handeling line 3
     sectionHeading("Watchword For the Day");
-    textAndVerse(currentDayEntry["line3"]);
+    textOnly(currentDayEntry["line3"][0]);
     // Handeling line 4
     sectionHeading("Doctrinal Text");
-    textAndVerse(currentDayEntry["line4"]);
+    textOnly(currentDayEntry["line4"][0]);
     // Handeling line 5
     sectionHeading("Prayer");
-    textOnly(currentDayEntry["line5"]);
+    textOnly(currentDayEntry["line5"][0]);
 }
 
 // The will handle all HTML for a JSON entry with six lines
@@ -246,6 +244,8 @@ function nineLineDay(currentDayEntry){//might want to consider parsing the "Watc
     sectionHeading("Prayer");
     textOnly(currentDayEntry["line9"]);
 }
+
+var request = getJsonFile(year);
 
 //This is where all the functions are called after the JSON is requested and loaded
 request.onload = function() { //Add a function to check for line_count and call the approiate day function. Todo

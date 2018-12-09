@@ -9,7 +9,7 @@ day = 1
 total_lines_for_this_day = 1
 currentLine = "Place holder"
 #setup the json file
-fO.write('{\n"myObj" : {\n"1" : {\n')
+fO.write('{\n"dayText" : {\n"1" : {\n')
 
 def create_json_entry():
     global day
@@ -23,14 +23,14 @@ def create_json_entry():
         pass
     else:
         currentLine = currentLine.rstrip()
-        print(currentLine[-5:])
-        print("The currentLine var is = {}" .format(currentLine))
+        # print(currentLine[-5:])
+        # print("The currentLine var is = {}" .format(currentLine))
         if (currentLine[-5:] == "Amen." or currentLine[-7:] == "Burial)"):
             fO.write('"line')
             fO.write(str(total_lines_for_this_day))
             fO.write('" ' + ': "'  + currentLine + '", \n')
             fO.write('"line_count')
-            fO.write('" ' + ': ')
+            fO.write('"' + ': ')
             #print("Total lines for the day = %s" %total_lines_for_this_day)
             fO.write('%d' % total_lines_for_this_day)
             fO.write(' \n')
