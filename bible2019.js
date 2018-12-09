@@ -1,40 +1,3 @@
-//In stead of storing some of the vlaues in global (day, year) it might be possible
-// to put those in an object instead....must do more research. Goodnight me
-
-
-//This sets the value of the day to today's "Day number"(current day number)
-var today = new Date()
-console.log(today);
-var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
-//day = 1 // For testing. Comment out when go live.
-var year = today.getFullYear();
-year = 2017 // For testing. Comment out when go live.
-// console.log("Today is day : " + day);
-// console.log("This year is : " + year);
-
-var defaults = {
-    year : year,
-    day : day
-}
-
-
-
-
-// This is the request function. I only moved it into a funtion to try to reuse it. So far, I can not figure a way to call this with a different "textYear" and retreive a new JSON file.
-// I now have three JSON files on github to test this. final2016.json, final2017.json and final2019.json. They are all copies of final2017.json
-// I am using the onclick button functions to change the day and year function but I think that the scope of that change is local to the main() function inside of the requests.onload function
-// Not sure how to make the main() function run with out first calling the requests.onload function. I seem to be stuck in...I'm thinking that using globals would be a solution but I am
-// told not to use them. I just can't figure a way around it. 
-function getJsonFile(textYear){
-    var requestURL = "https://raw.githubusercontent.com/thecodinghyrax/Bible_page_update_2019/master/final" + textYear + ".json"
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL)
-    request.responseType = 'json';
-    request.send();
-    return request
-}
-
-
 // Default bible version to use
 //var version = "NIV";
 // Going to leave this in here incase anything changes in the future. As of now, no verse links suggest a different translation
@@ -285,15 +248,45 @@ function nineLineDay(currentDayEntry){
     textOnly(currentDayEntry["line9"][0]);
 }
 
+//This sets the value of the day to today's "Day number"(current day number)
+var today = new Date()
+console.log(today);
+var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
+day = 365 // For testing. Comment out when go live.
+var year = today.getFullYear();
+year = 2017 // For testing. Comment out when go live.
+// console.log("Today is day : " + day);
+// console.log("This year is : " + year);
+
+var defaults = {
+    year : year,
+    day : day
+}
 
 
-var request = getJsonFile(defaults.year);
+// This is the request function. I only moved it into a funtion to try to reuse it. So far, I can not figure a way to call this with a different "textYear" and retreive a new JSON file.
+// I now have three JSON files on github to test this. final2016.json, final2017.json and final2019.json. They are all copies of final2017.json
+// I am using the onclick button functions to change the day and year function but I think that the scope of that change is local to the main() function inside of the requests.onload function
+// Not sure how to make the main() function run with out first calling the requests.onload function. I seem to be stuck in...I'm thinking that using globals would be a solution but I am
+// told not to use them. I just can't figure a way around it. 
+function getJsonFile(textYear){
+    var requestURL = "https://raw.githubusercontent.com/thecodinghyrax/Bible_page_update_2019/master/final" + textYear + ".json"
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL)
+    request.responseType = 'json';
+    request.send();
+    return request
+}
+
+function main(mainYear){
+
+var request = getJsonFile(mainYear);
 
 //This is where all the functions are called after the JSON is requested and loaded
 request.onload = function() {
     
     // Main function handles all of the other function calls. This will be recalled after the "next" and/or "previous" buttons are clicked
-    function main(){
+    //function main(){
     var data = request.response;
     //console.log("The data object contains : " + data);
     if (data.dayText[defaults.day]["line_count"] == 5){
@@ -348,7 +341,7 @@ request.onload = function() {
         } else {
             defaults.day -= 1;
         } 
-        main(); 
+        main(defaults.year); 
         };
 
     // Defines button function. When pressed - advances the day and reloads the main function or
@@ -365,11 +358,13 @@ request.onload = function() {
        
         console.log("The day of the year is now = " + defaults.day);
         console.log("The year is now = " + defaults.year);
-        main();};
+        main(defaults.year);};
   
-  };
-    
+  //};
+};// main() close???
     // Initial call of the main() function
-    main();    
+
 
 }
+main(defaults.year);
+console.log("This is the end of the js. defaults.year = " + defaults.year);
