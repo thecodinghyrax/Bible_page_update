@@ -254,6 +254,8 @@ var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
 var year = today.getFullYear();
 year = 2017 // For testing. Comment out when go live.
 
+//This will hold the default day and year values. It can also be update from the 
+// functions in the next and previous buttons. 
 var defaults = {
     year : year,
     day : day
