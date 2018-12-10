@@ -256,9 +256,11 @@ function nineLineDay(currentDayEntry){
 var today = new Date()
 console.log(today);
 var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
-day = 364 // For testing. Comment out when go live.
+
+
+//day = 364 // For testing. Comment out when go live.
 var year = today.getFullYear();
-year = 2017 // For testing. Comment out when go live.
+//year = 2018 // For testing. Comment out when go live.
 
 //This will hold the default day and year values. It can also be update from the 
 // functions in the next and previous buttons. 
@@ -311,8 +313,20 @@ request.onload = function() {
     var buttonNext = document.createElement("button");
     buttonNext.setAttribute("id", "next");
     buttonNext.innerHTML = "Next";
+    var inputField = document.createElement("input");
+    inputField.setAttribute("id", "input");
+    inputField.setAttribute("type", "date");
+    inputField.setAttribute("value", "2018-01-01");
+    inputField.setAttribute("min", "2016-01-01");
+    inputField.setAttribute("max", "2018-12-31");
+    //inputField.innerHTML = "Next";
+    var searchButton = document.createElement("button");
+    searchButton.setAttribute("id", "search");
+    searchButton.innerHTML = "Search";
     div.appendChild(buttonPrevious);
     div.appendChild(buttonNext);
+    div.appendChild(inputField);
+    div.appendChild(searchButton);
     document.querySelector("body").appendChild(div);
     
 
@@ -372,7 +386,29 @@ request.onload = function() {
        
         console.log("The day of the year is now = " + defaults.day);
         console.log("The year is now = " + defaults.year);
-        main(defaults.year);};
+        main(defaults.year);
+    };
+
+    document.getElementById("search").onclick = function () {
+        var x = document.getElementById("input")
+        var searchInput = x.value;
+        // console.log("Here is what is returned from the date input : ");
+        // console.log(searchInput);
+        var inputList = searchInput.split("-");
+        // console.log(inputList);
+        defaults.year = inputList[0]
+        var searchDay = new Date(defaults.year, (inputList[1] - 1), inputList[2]);
+        var searchDayOfTheYear = Math.ceil((searchDay - new Date(inputList[0], 0, 0)) / 86400000);
+        // console.log("The searchDay value is : " + searchDay);
+        // console.log("The searchDayOfTheYear is : " + searchDayOfTheYear);
+        defaults.day = searchDayOfTheYear;
+        main(defaults.year);
+        
+        
+
+        
+        
+    };
   
 };// main()
     
