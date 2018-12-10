@@ -13,7 +13,7 @@ with open(fileIn, 'r', encoding="ascii", errors="surrogateescape") as f:
 
     #Prints the "raw" data to the terminal output so you can look through it and find the marks that 
     #don't fit. (Before the replacments)
-    #print(repr(data))
+    print(repr(data)[0:100000])
 
     #If a new goofy character is found, run this script on the file and look in the terminal output
     #for something like "\udce2". Then go to the text for that day and try to understand what the 
@@ -26,11 +26,16 @@ with open(fileIn, 'r', encoding="ascii", errors="surrogateescape") as f:
     data = data.replace('\udce2\udc80\udc9d', '"')
     data = data.replace('\udce2\udc80\udc99', "\'")
     data = data.replace('\udcc2\udca0', ' ')
-    data = data.replace('\udce2\udc80\udca8', ' ')
+    data = data.replace('\udce2\udc80\udca8', '')#took out space
     data = data.replace('\udce2\udc80\udca0', '')
     data = data.replace('\udce2\udc80\udc98', "\'")
     data = data.replace('\"', '\\"')
     data = data.replace('(NIV)', '')
+    data = data.replace('\t', '')
+    data = data.replace('\f', '')
+    
+    
+
    
     #Remove the next two when done - This allows you to search the output text for "\" and find 
     #the offending markings
@@ -39,7 +44,7 @@ with open(fileIn, 'r', encoding="ascii", errors="surrogateescape") as f:
 
     #Prints the "raw" data to the terminal output so you can look through it and find the marks that 
     #don't fit.
-    #print(repr(data))
+    #print(repr(data)[0:100000])
 
 with open('firstpassout.txt', 'w', encoding="ascii", errors="surrogateescape") as f:
     f.write(data)

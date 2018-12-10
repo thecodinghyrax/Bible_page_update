@@ -139,7 +139,7 @@ split_seven_entires()
 split_eight_entires()
 split_nine_entires()
 
-with open("final2017.json", 'w') as json_out:  
+with open("final2016.json", 'w') as json_out:  
     json.dump(data, json_out)
 
 print("Fourthpass is complete")

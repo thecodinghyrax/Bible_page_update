@@ -333,23 +333,33 @@ request.onload = function() {
     // Defines button function. When pressed - decrement the day and reloads the main function or
     // decraments the year and resets the day if it is the first day of the year
     document.getElementById("previous").onclick = function () {
-        if (defaults.day == 1){
+        if (defaults.day == 1 && defaults.year != 2016){
             defaults.year -= 1;
             defaults.day = 365;
             console.log("The day of the year is now = " + defaults.day);
             console.log("The year is now = " + defaults.year);
+        } else if (defaults.day == 1 && defaults.year == 2016){
+            defaults.year -= 1;
+            defaults.day = 366; //2016 is a leap year
+            console.log("The day of the year is now = " + defaults.day);
+            console.log("The year is now = " + defaults.year);
         } else {
             defaults.day -= 1;
-        } 
+        }
         main(defaults.year); 
         };
 
     // Defines button function. When pressed - advances the day and reloads the main function or
     // advances the year and resets the day if it is the last day of the year
     document.getElementById("next").onclick = function () {
-        if (defaults.day == 365){
+        if (defaults.day == 365 && defaults.year != 2016){
             defaults.year += 1;
             defaults.day = 1
+            console.log("The day of the year is now = " + defaults.day);
+            console.log("The year is now = " + defaults.year);
+        } else if (defaults.day == 366 && defaults.year == 2016){
+            defaults.year += 1;
+            defaults.day += 1;
             console.log("The day of the year is now = " + defaults.day);
             console.log("The year is now = " + defaults.year);
         } else {

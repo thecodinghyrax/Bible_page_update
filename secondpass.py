@@ -19,7 +19,7 @@ def create_json_entry():
     
     
     #print("From create_json_entry: currentLine is %r" %currentLine)
-    if (currentLine == "\n"):
+    if (currentLine == "\n" or currentLine == "''\n"):
         # print("I found a new line. Passing")
         pass
     elif (currentLine == ""):
@@ -27,7 +27,8 @@ def create_json_entry():
     else:
         currentLine = currentLine.rstrip()
         # print(currentLine[-5:])
-        # print("The currentLine var is = {}" .format(currentLine))
+        print("The currentLine var is = %r" % currentLine)
+        #print("The currentLine var is = {}" .format(currentLine))
         if (currentLine[-5:] == "Amen." or currentLine[-7:] == "Burial)" or currentLine[-5:] == "Amen!"):
             fO.write('"line')
             fO.write(str(total_lines_for_this_day))
@@ -40,7 +41,8 @@ def create_json_entry():
             total_lines_for_this_day = 1
             # Writes the day counter and the Json : { characters
             day = (day + 1)
-            if (day <= 365):
+            if (day <= 366):# leap year
+            #if (day <= 365): # normal year
                 fO.write('}, \n"' + str(day) + '" : { \n')
             total_lines_for_this_day = 1
         else:
@@ -54,7 +56,8 @@ def create_json_entry():
     #     day = (day +100) #just to make it break
 
 
-while (day < 366):
+while (day < 367):# leap year
+#while (day < 366):# normal year
     create_json_entry()
 # while (currentLine != ""):
 #     create_json_entry()
