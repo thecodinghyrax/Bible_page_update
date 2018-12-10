@@ -18,6 +18,7 @@ for day in data["dayText"]:
         for day_name in days_of_the_week:
             #Tries to match each day name to the first 10 letters of the line
             try:
+                #This will select a line that starts with a day but not if it's an 8 line
                 if day_name in data["dayText"][day][line][:10] and data["dayText"][day]["line_count"] != 8:
                     split_line = data["dayText"][day][line]
                     split_line = split_line.split(' - ')
@@ -38,6 +39,7 @@ for day in data["dayText"]:
                     next_line = split_line + next_line
                     # This is adding the full (split) verse list to the line below the date line
                     data["dayText"][day][next_line_number] = next_line
+
                 # This should only pick up and work on the eight line days   
                 elif day_name in data["dayText"][day][line][:10]:
                     # This is handling the date line and verses
@@ -71,6 +73,7 @@ for day in data["dayText"]:
                 pass
 
             try:
+                #This will go back to a 9 line day and handle the special text and verses
                 if day_name in data["dayText"][day][line][:10] and data["dayText"][day]["line_count"] == 9:
                     split_line = data["dayText"][day]["line5"]
                     split_line = split_line.split(' - ')

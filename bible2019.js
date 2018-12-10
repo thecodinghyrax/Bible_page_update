@@ -158,8 +158,14 @@ function sevenLineDay(currentDayEntry){
     // Handeling line 2
     dateLine(currentDayEntry["line3"][0]);//order is switched intentionally
     // Handeling line 3
-    sectionHeading("Watchword for the Week");
-    textOnly(currentDayEntry["line2"][0]);
+    if (currentDayEntry["line2"].length == 2){
+        sectionHeading(currentDayEntry["line2"][0]);
+        textOnly(currentDayEntry["line2"][1]);
+    } else {
+        sectionHeading("Watchword for the Week");
+        textOnly(currentDayEntry["line2"][0]);
+    }
+    
     // Handeling line 4
     sectionHeading("Daily Scripture Lessions");
     verseLine(currentDayEntry["line4"]);
@@ -252,7 +258,7 @@ console.log(today);
 var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
 //day = 365 // For testing. Comment out when go live.
 var year = today.getFullYear();
-year = 2017 // For testing. Comment out when go live.
+//year = 2017 // For testing. Comment out when go live.
 
 //This will hold the default day and year values. It can also be update from the 
 // functions in the next and previous buttons. 
