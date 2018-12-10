@@ -256,9 +256,9 @@ function nineLineDay(currentDayEntry){
 var today = new Date()
 console.log(today);
 var day = Math.ceil((today - new Date(today.getFullYear(), 0, 1)) / 86400000);
-//day = 365 // For testing. Comment out when go live.
+day = 364 // For testing. Comment out when go live.
 var year = today.getFullYear();
-//year = 2017 // For testing. Comment out when go live.
+year = 2017 // For testing. Comment out when go live.
 
 //This will hold the default day and year values. It can also be update from the 
 // functions in the next and previous buttons. 
@@ -333,18 +333,20 @@ request.onload = function() {
     // Defines button function. When pressed - decrement the day and reloads the main function or
     // decraments the year and resets the day if it is the first day of the year
     document.getElementById("previous").onclick = function () {
-        if (defaults.day == 1 && defaults.year != 2016){
+        if (defaults.day == 1 && defaults.year != 2017){
             defaults.year -= 1;
             defaults.day = 365;
-            console.log("The day of the year is now = " + defaults.day);
-            console.log("The year is now = " + defaults.year);
-        } else if (defaults.day == 1 && defaults.year == 2016){
+            console.log("The day of the year is now (non-2016)= " + defaults.day);
+            console.log("The year is now (non-2016) = " + defaults.year);
+        } else if (defaults.day == 1 && defaults.year == 2017){
             defaults.year -= 1;
             defaults.day = 366; //2016 is a leap year
-            console.log("The day of the year is now = " + defaults.day);
-            console.log("The year is now = " + defaults.year);
+            console.log("The day of the year is now (leap year) = " + defaults.day);
+            console.log("The year is now (leap year) = " + defaults.year);
         } else {
             defaults.day -= 1;
+            console.log("The day of the year is now (normal day) = " + defaults.day);
+            console.log("The year is now (normal day) = " + defaults.year);
         }
         main(defaults.year); 
         };
@@ -355,15 +357,17 @@ request.onload = function() {
         if (defaults.day == 365 && defaults.year != 2016){
             defaults.year += 1;
             defaults.day = 1
-            console.log("The day of the year is now = " + defaults.day);
-            console.log("The year is now = " + defaults.year);
+            console.log("The day of the year is now (non-leap year) = " + defaults.day);
+            console.log("The year is now (non-leap year) = " + defaults.year);
         } else if (defaults.day == 366 && defaults.year == 2016){
             defaults.year += 1;
-            defaults.day += 1;
-            console.log("The day of the year is now = " + defaults.day);
-            console.log("The year is now = " + defaults.year);
+            defaults.day = 1;
+            console.log("The day of the year is now (leap year) = " + defaults.day);
+            console.log("The year is now (leap year) = " + defaults.year);
         } else {
             defaults.day += 1;
+            console.log("The day of the year is now (normal day) = " + defaults.day);
+            console.log("The year is now (normal day) = " + defaults.year);
         }
        
         console.log("The day of the year is now = " + defaults.day);
