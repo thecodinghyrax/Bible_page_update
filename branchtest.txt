@@ -1,1 +1,0 @@
-So I'm no tused to making branchs in git (push to master only).  I'm creating a text doc (this) to see how the whole branch thing works. 
