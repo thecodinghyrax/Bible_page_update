@@ -348,11 +348,13 @@ request.onload = function() {
     // decraments the year and resets the day if it is the first day of the year
     document.getElementById("previous").onclick = function () {
         if (defaults.day == 1 && defaults.year != 2017){
+            defaults.year = Number(defaults.year)
             defaults.year -= 1;
             defaults.day = 365;
             console.log("The day of the year is now (non-2016)= " + defaults.day);
             console.log("The year is now (non-2016) = " + defaults.year);
         } else if (defaults.day == 1 && defaults.year == 2017){
+            defaults.year = Number(defaults.year)
             defaults.year -= 1;
             defaults.day = 366; //2016 is a leap year
             console.log("The day of the year is now (leap year) = " + defaults.day);
@@ -369,11 +371,13 @@ request.onload = function() {
     // advances the year and resets the day if it is the last day of the year
     document.getElementById("next").onclick = function () {
         if (defaults.day == 365 && defaults.year != 2016){
+            defaults.year = Number(defaults.year)
             defaults.year += 1;
             defaults.day = 1
             console.log("The day of the year is now (non-leap year) = " + defaults.day);
             console.log("The year is now (non-leap year) = " + defaults.year);
         } else if (defaults.day == 366 && defaults.year == 2016){
+            defaults.year = Number(defaults.year)
             defaults.year += 1;
             defaults.day = 1;
             console.log("The day of the year is now (leap year) = " + defaults.day);
@@ -397,11 +401,15 @@ request.onload = function() {
         var inputList = searchInput.split("-");
         // console.log(inputList);
         defaults.year = inputList[0]
+        console.log("The year after searching is : " + defaults.year);
+        
         var searchDay = new Date(defaults.year, (inputList[1] - 1), inputList[2]);
         var searchDayOfTheYear = Math.ceil((searchDay - new Date(inputList[0], 0, 0)) / 86400000);
         // console.log("The searchDay value is : " + searchDay);
         // console.log("The searchDayOfTheYear is : " + searchDayOfTheYear);
         defaults.day = searchDayOfTheYear;
+        console.log("The defaults.day value after serching is : " + defaults.day);
+        
         main(defaults.year);
         
         
@@ -418,4 +426,4 @@ request.onload = function() {
 
 // Initial call of the main() function
 main(defaults.year);
-console.log("This is the end of the js. defaults.year = " + defaults.year);
+//console.log("This is the end of the js. defaults.year = " + defaults.year);
