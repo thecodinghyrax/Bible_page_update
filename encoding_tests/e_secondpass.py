@@ -10,7 +10,7 @@ total_lines_for_this_day = 1
 currentLine = "Place holder"
 
 def secondFunc(leap):
-    fI = codecs.open("e_firstpassout.txt", "r", encoding="utf-8")
+    fI = codecs.open("2017text.txt", "r", encoding="utf-8")
     fO = codecs.open("e_secondpassout.json", "w", encoding="utf-8")
 
     
@@ -62,6 +62,7 @@ def secondFunc(leap):
                 total_lines_for_this_day = 1
             else:
                 currentLine = currentLine.rstrip()
+                currentLine = currentLine.replace('\r', ' ')
                 fO.write('"line')
                 fO.write(str(total_lines_for_this_day))
                 fO.write('" ' + ': "' + currentLine + '", \n')
