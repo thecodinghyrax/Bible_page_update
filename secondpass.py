@@ -33,7 +33,8 @@ def secondFunc(leap):
             #print(currentLine[-5:])
             #print("The currentLine var is = %r" % currentLine)
             #print("The currentLine var is = {}" .format(currentLine))
-            if (currentLine[-5:] == "Amen." or currentLine[-7:] == "Burial)" or currentLine[-5:] == "Amen!"):
+            # if (currentLine[-5:] == "Amen." or currentLine[-7:] == "Burial)" or currentLine[-5:] == "Amen!" or currentLine.endswith("Hallelujah!")):
+            if (currentLine.endswith("Amen.") or currentLine.endswith("Burial)") or currentLine.endswith("Amen!") or currentLine.endswith("Hallelujah!")):
                 fO.write('"line')
                 fO.write(str(total_lines_for_this_day))
                 fO.write('" ' + ': "'  + currentLine + '", \n')
