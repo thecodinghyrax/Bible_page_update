@@ -20,13 +20,13 @@ def thirdFunc():
                 try:
                     #This will select a line that starts with a day but not if it's an 8 line
                     if day_name in data["dayText"][day][line][:10] and data["dayText"][day]["line_count"] != 8:
+                        print("I'm on %s day" % (data["dayText"][day][line]))
                         split_line = data["dayText"][day][line]
                         split_line = split_line.split(' - ')
                         data["dayText"][day][line] = split_line.pop(0)
 
                         #split_line is currently holding the verses from the date line in a list
                         split_line = split_line[0].split("; ")
-
                         #line_number is getting the line number of the next line. Used to get the 
                         #next set of verses to add to a full verse list. 
                         line_number = int(line[-1]) + 1
@@ -46,7 +46,7 @@ def thirdFunc():
                         split_line = data["dayText"][day][line]
                         split_line = split_line.split(' - ')
                         date_list = []
-                        date_list.append(split_line.pop(0))          
+                        date_list.append(split_line.pop(0))         
                         verses_to_split = split_line[0]
                         verses_to_split = verses_to_split.split("; ")
                         data["dayText"][day][line] = date_list + verses_to_split
