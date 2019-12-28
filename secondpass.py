@@ -8,8 +8,8 @@ total_lines_for_this_day = 1
 currentLine = "Place holder"
 
 def secondFunc(leap):
-    fI = open("firstpassout.txt", "r")
-    fO = open("secondpassout.json", "w")
+    fI = open("firstpassout.txt", "r", encoding='utf-8')
+    fO = open("secondpassout.json", "w", encoding='utf-8')
 
     
     #setup the json file
@@ -34,7 +34,7 @@ def secondFunc(leap):
             #print("The currentLine var is = %r" % currentLine)
             #print("The currentLine var is = {}" .format(currentLine))
             # if (currentLine[-5:] == "Amen." or currentLine[-7:] == "Burial)" or currentLine[-5:] == "Amen!" or currentLine.endswith("Hallelujah!")):
-            if (currentLine.endswith("Amen.") or currentLine.endswith("Burial)") or currentLine.endswith("Amen!") or currentLine.endswith("Hallelujah!")):
+            if (currentLine.endswith("Amen.") or currentLine.endswith("Burial)") or currentLine.endswith("men!") or currentLine.endswith("Hallelujah!")):
                 fO.write('"line')
                 fO.write(str(total_lines_for_this_day))
                 fO.write('" ' + ': "'  + currentLine + '", \n')

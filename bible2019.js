@@ -316,9 +316,9 @@ request.onload = function() {
     var inputField = document.createElement("input");
     inputField.setAttribute("id", "input");
     inputField.setAttribute("type", "date");
-    inputField.setAttribute("value", "2018-01-01");
+    inputField.setAttribute("value", "2020-01-01");
     inputField.setAttribute("min", "2016-01-01");
-    inputField.setAttribute("max", "2019-12-31");//This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
+    inputField.setAttribute("max", "2020-12-31");//This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
     //inputField.innerHTML = "Next";
     var searchButton = document.createElement("button");
     searchButton.setAttribute("id", "search");
@@ -338,7 +338,7 @@ request.onload = function() {
     };
     
     //Hides the next button if current day is the last day in the last JSON file
-    if (defaults.day >= 365 && defaults.year == 2019){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
+    if (defaults.day >= 365 && defaults.year == 2020){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
         document.getElementById("next").style.visibility = "hidden";
     } else {
         document.getElementById("next").style.visibility = "visible";

@@ -1,11 +1,11 @@
-#Run this file on the origonal text document first before any other python files are ran!!!!
+#Run this file on the original text document first before any other python files are ran!!!!
 
 #This script will read in the file that is listed when ran (fileIn) and output a texptext.txt file with 
 #all the non-Windows formatting characters removed/replaced.
 
 
 def firstFunc(fileIn, raw):
-    with open(fileIn, 'r', encoding="ascii", errors="surrogateescape") as f:
+    with open(fileIn, 'r', encoding="UTF-8", errors="surrogateescape") as f:
         data = f.read()
 
         #Prints the "raw" data to the terminal output so you can look through it and find the marks that 
@@ -32,15 +32,16 @@ def firstFunc(fileIn, raw):
         #data = data.replace('\udce2\udc80\udc98', "'")
         #data = data.replace('\udcef\udcbf\udcbd', "-")
         data = data.replace('(NIV)', '')
+        data = data.replace('NIV', '')
         data = data.replace('\t', '')
         data = data.replace('\f', '')
-        data = data.replace('\udc96', '-')
-        data = data.replace('\udc97', '-')
-        data = data.replace('\udc93', '\\"')
-        data = data.replace('\udc94', '\\"')
-        data = data.replace('\udc92', "'")
-        data = data.replace('\udc86', "")
-        data = data.replace('\udc91', "'")
+        # data = data.replace('\udc96', '-')
+        # data = data.replace('\udc97', '-')
+        # data = data.replace('\udc93', '\\"')
+        # data = data.replace('\udc94', '\\"')
+        # data = data.replace('\udc92', "'")
+        # data = data.replace('\udc86', "")
+        # data = data.replace('\udc91', "'")
         
         #Remove the next two when done - This allows you to search the output text for "\" and find 
         #the offending markings
@@ -54,7 +55,9 @@ def firstFunc(fileIn, raw):
         elif raw == "after-end":
             print(repr(data)[100000:])
 
-    with open('firstpassout.txt', 'w', encoding="ascii", errors="surrogateescape") as f:
+    # with open('firstpassout.txt', 'w', encoding="ascii", errors="surrogateescape") as f:
+    #     f.write(data)
+    with open('firstpassout.txt', 'w', encoding="UTF-8", errors="surrogateescape") as f:
         f.write(data)
 
 if __name__ == "__main__":
