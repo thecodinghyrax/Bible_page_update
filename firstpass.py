@@ -2,7 +2,7 @@
 
 #This script will read in the file that is listed when ran (fileIn) and output a texptext.txt file with 
 #all the non-Windows formatting characters removed/replaced.
-#########################  This file does almost nothing now that I am encoding in utf-8. Consider removing next year ############################################
+#############  This file does almost nothing now that I am encoding in utf-8. Consider removing next year ###############################
 
 
 def firstFunc(fileIn, raw):
@@ -29,8 +29,6 @@ def firstFunc(fileIn, raw):
         elif raw == "after-end":
             print(repr(data)[100000:])
 
-    # with open('firstpassout.txt', 'w', encoding="ascii", errors="surrogateescape") as f:
-    #     f.write(data)
     with open('firstpassout.txt', 'w', encoding="UTF-8", errors="surrogateescape") as f:
         f.write(data)
 

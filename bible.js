@@ -29,31 +29,7 @@ function verseLine (line){
             para.appendChild(tab);
             document.querySelector("body").appendChild(para);
             }
-        //version = "NIV";
         }
-
-// Leaving this in although its unused at this time. 
-// Creates an HTML line for a text line that contains text + verse. 
-// function textAndVerse(line) {
-//     var para = document.createElement("p");
-//     var span = document.createElement("span");
-//     var verseSpan = document.createElement("span");
-//     var anchor = document.createElement("a");
-//     var text = document.createTextNode(line[0]);
-//     var verseText = document.createTextNode(line[1]);
-//     var tab = document.createTextNode("\t\t");
-
-//     span.appendChild(text);
-//     para.appendChild(span);
-//     anchor.appendChild(verseText);
-//     anchor.setAttribute("href", createLink(line[1]));
-//     anchor.setAttribute("target", "_blank");
-//     verseSpan.appendChild(anchor);
-//     para.appendChild(verseSpan);
-//     document.querySelector("body").appendChild(para);
-//     version = "NIV";
-    
-// }
 
 // Creates an HTML line for text only
 function textOnly(line){
@@ -163,7 +139,7 @@ function sevenLineDay(currentDayEntry){
     textOnly(currentDayEntry["line7"]);
 }
 
-// The will handle all HTML for a JSON entry with eigth lines - Please note....this is still broken
+// The will handle all HTML for a JSON entry with eigth lines
 function eightLineDay(currentDayEntry){
     //This is a reset of the body
     var body = document.querySelector("body");
@@ -256,6 +232,8 @@ var defaults = {
 // This is the request function. This will pull in the data from github with a file name that
 // matches final<year>.json
 function getJsonFile(textYear){
+    // This is for testing. Uncomment the cccog entry before going live. TODO
+    // var requestURL = "https://raw.githubusercontent.com/CCCOG/gh-pages/master/final" + textYear + ".json"
     var requestURL = "https://raw.githubusercontent.com/thecodinghyrax/Bible_page_update_2019/master/final" + textYear + ".json"
     var request = new XMLHttpRequest();
     request.open('GET', requestURL)
@@ -303,7 +281,6 @@ request.onload = function() {
     inputField.setAttribute("value", "2020-01-01");
     inputField.setAttribute("min", "2016-01-01");
     inputField.setAttribute("max", "2020-12-31");//This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
-    //inputField.innerHTML = "Next";
     var searchButton = document.createElement("button");
     searchButton.setAttribute("id", "search");
     searchButton.innerHTML = "Search";
@@ -322,7 +299,7 @@ request.onload = function() {
     };
     
     //Hides the next button if current day is the last day in the last JSON file
-    if (defaults.day >= 366 && defaults.year == 2020){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
+    if (defaults.day >= 366 && defaults.year == 2020){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Please account for leap year if needed. Todo
         document.getElementById("next").style.visibility = "hidden";
     } else {
         document.getElementById("next").style.visibility = "visible";
@@ -330,18 +307,21 @@ request.onload = function() {
     
     // Defines the funtion to advance to the next day entry 
     function next() {
-        if (defaults.day == 365 && defaults.year != 2016){
+        this.outerHTML = this.outerHTML;
+        if (defaults.day == 365 && defaults.year != 2016 && defaults.year != 2020){ //Please account for leap year if needed. Todo
             defaults.year = Number(defaults.year)
             defaults.year += 1;
-            defaults.day = 1
+            defaults.day = 1            
             console.log("The day of the year is now (non-leap year) = " + defaults.day);
             console.log("The year is now (non-leap year) = " + defaults.year);
-        } else if (defaults.day == 366 && defaults.year == 2016){
+        } else if (defaults.day == 366 && defaults.year == 2016){ //Please account for leap year if needed. Todo
             defaults.year = Number(defaults.year)
             defaults.year += 1;
             defaults.day = 1;
             console.log("The day of the year is now (leap year) = " + defaults.day);
             console.log("The year is now (leap year) = " + defaults.year);
+        } else if (defaults.day >= 366 && defaults.year == 2020) { // This will need to be removed(?) next year and defaults.year == 2020 will need to move to the previous if line
+            // Do nothing. Exit the function?
         } else {
             defaults.day += 1;
             console.log("The day of the year is now (normal day) = " + defaults.day);
@@ -350,21 +330,28 @@ request.onload = function() {
        
         console.log("The day of the year is now = " + defaults.day);
         console.log("The year is now = " + defaults.year);
-        main(defaults.year);
-        this.outerHTML = this.outerHTML; //This is needed to "Reset"the body element to prevent every action from doubling every time its activated. 
+        main(defaults.year); 
     };
+
     // Defines the function to advance to the previous day entry
     function previous() {
-        if (defaults.day == 1 && defaults.year != 2017){
+        this.outerHTML = this.outerHTML;
+        if (defaults.day == 1 && defaults.year != 2017 && defaults.year != 2021){ // Day 1 not following a leap year
             defaults.year = Number(defaults.year)
             defaults.year -= 1;
             defaults.day = 365;
             console.log("The day of the year is now (non-2016)= " + defaults.day);
             console.log("The year is now (non-2016) = " + defaults.year);
-        } else if (defaults.day == 1 && defaults.year == 2017){
+        } else if (defaults.day == 1 && defaults.year == 2017){ // Day 1 after the 2016 leap year
             defaults.year = Number(defaults.year)
             defaults.year -= 1;
             defaults.day = 366; //2016 is a leap year
+            console.log("The day of the year is now (leap year) = " + defaults.day);
+            console.log("The year is now (leap year) = " + defaults.year);
+        } else if (defaults.day == 1 && defaults.year == 2021){ // Day 1 after the 2020 leap year
+            defaults.year = Number(defaults.year)
+            defaults.year -= 1;
+            defaults.day = 366; //2020 is a leap year
             console.log("The day of the year is now (leap year) = " + defaults.day);
             console.log("The year is now (leap year) = " + defaults.year);
         } else {
@@ -373,21 +360,19 @@ request.onload = function() {
             console.log("The year is now (normal day) = " + defaults.year);
         }
         main(defaults.year); 
-        this.outerHTML = this.outerHTML; //This is needed to "Reset"the body element to prevent every action from doubling every time its activated. 
         };
     document.getElementById('next').onclick = next;
     document.getElementById('previous').onclick = previous;
     document.body.addEventListener("keyup", function(event) {
-        if (event.keyCode === 39) {
-            console.log("The Enter key was pressed");
-            
+        if (event.keyCode === 39) {            
             event.preventDefault();
+            this.outerHTML = this.outerHTML;
             next();
-            this.outerHTML = this.outerHTML;
-        } else if (event.keyCode === 37){
+        } 
+        if (event.keyCode === 37){
             event.preventDefault();
-            previous();
             this.outerHTML = this.outerHTML;
+            previous();
         }
     });
 
@@ -395,34 +380,21 @@ request.onload = function() {
     document.getElementById("search").onclick = function () {
         var x = document.getElementById("input")
         var searchInput = x.value;
-        // console.log("Here is what is returned from the date input : ");
-        // console.log(searchInput);
         var inputList = searchInput.split("-");
-        // console.log(inputList);
-        defaults.year = inputList[0]
-        console.log("The year after searching is : " + defaults.year);
+        defaults.year = inputList[0];
         
         var searchDay = new Date(defaults.year, (inputList[1] - 1), inputList[2]);
         var searchDayOfTheYear = Math.ceil((searchDay - new Date(inputList[0], 0, 0)) / 86400000);
-        // console.log("The searchDay value is : " + searchDay);
-        // console.log("The searchDayOfTheYear is : " + searchDayOfTheYear);
         defaults.day = searchDayOfTheYear;
-        console.log("The defaults.day value after serching is : " + defaults.day);
         
         main(defaults.year);
-        
-        
 
-        
-        
     };
   
 };// main()
-    
 
 
 }
 
 // Initial call of the main() function
 main(defaults.year);
-//console.log("This is the end of the js. defaults.year = " + defaults.year);
