@@ -6,7 +6,7 @@ import json
 def thirdFunc():
     days_of_the_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
-    with open("secondpassout.json", encoding='utf-8') as json_file:  
+    with open("secondpassout.json", encoding='utf-8-sig') as json_file:  
         data = json.load(json_file)
 
 
@@ -111,7 +111,7 @@ def thirdFunc():
                 except TypeError:
                     pass
 
-    with open("thirdpassout.json", 'w', encoding='utf-8') as json_out:  
+    with open("thirdpassout.json", 'w', encoding='utf-8-sig') as json_out:  
         json.dump(data, json_out)
 
 if __name__ == "__main__":

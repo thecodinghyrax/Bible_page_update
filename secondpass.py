@@ -9,7 +9,7 @@ currentLine = "Place holder"
 
 def secondFunc(leap):
     fI = open("firstpassout.txt", "r", encoding='utf-8')
-    fO = open("secondpassout.json", "w", encoding='utf-8')
+    fO = open("secondpassout.json", "w", encoding='utf-8-sig')
 
     
     #setup the json file
