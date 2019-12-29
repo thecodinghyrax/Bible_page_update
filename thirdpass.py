@@ -139,6 +139,10 @@ def thirdFunc():
                         # next_line is the text from the line below the date line
                         next_line = data["dayText"][day][next_line_number]
                         next_line = next_line.split("; ")
+                        split_line = split_line[0].split("; ")
+                        next_line = split_line + next_line
+                        
+                       
 
 
                         next_line_corrected = []
