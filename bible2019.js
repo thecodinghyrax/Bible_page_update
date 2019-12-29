@@ -322,61 +322,13 @@ request.onload = function() {
     };
     
     //Hides the next button if current day is the last day in the last JSON file
-    if (defaults.day >= 365 && defaults.year == 2020){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
+    if (defaults.day >= 366 && defaults.year == 2020){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
         document.getElementById("next").style.visibility = "hidden";
     } else {
         document.getElementById("next").style.visibility = "visible";
     };
     
-    // Defines button function. When pressed - decrement the day and reloads the main function or
-    // decraments the year and resets the day if it is the first day of the year
-    document.getElementById("previous").onclick = function () {
-        if (defaults.day == 1 && defaults.year != 2017){
-            defaults.year = Number(defaults.year)
-            defaults.year -= 1;
-            defaults.day = 365;
-            console.log("The day of the year is now (non-2016)= " + defaults.day);
-            console.log("The year is now (non-2016) = " + defaults.year);
-        } else if (defaults.day == 1 && defaults.year == 2017){
-            defaults.year = Number(defaults.year)
-            defaults.year -= 1;
-            defaults.day = 366; //2016 is a leap year
-            console.log("The day of the year is now (leap year) = " + defaults.day);
-            console.log("The year is now (leap year) = " + defaults.year);
-        } else {
-            defaults.day -= 1;
-            console.log("The day of the year is now (normal day) = " + defaults.day);
-            console.log("The year is now (normal day) = " + defaults.year);
-        }
-        main(defaults.year); 
-        };
-
-    // Defines button function. When pressed - advances the day and reloads the main function or
-    // advances the year and resets the day if it is the last day of the year
-    // document.getElementById("next").onclick = function () {
-    //     if (defaults.day == 365 && defaults.year != 2016){
-    //         defaults.year = Number(defaults.year)
-    //         defaults.year += 1;
-    //         defaults.day = 1
-    //         console.log("The day of the year is now (non-leap year) = " + defaults.day);
-    //         console.log("The year is now (non-leap year) = " + defaults.year);
-    //     } else if (defaults.day == 366 && defaults.year == 2016){
-    //         defaults.year = Number(defaults.year)
-    //         defaults.year += 1;
-    //         defaults.day = 1;
-    //         console.log("The day of the year is now (leap year) = " + defaults.day);
-    //         console.log("The year is now (leap year) = " + defaults.year);
-    //     } else {
-    //         defaults.day += 1;
-    //         console.log("The day of the year is now (normal day) = " + defaults.day);
-    //         console.log("The year is now (normal day) = " + defaults.year);
-    //     }
-       
-    //     console.log("The day of the year is now = " + defaults.day);
-    //     console.log("The year is now = " + defaults.year);
-    //     main(defaults.year);
-    // };
-
+    // Defines the funtion to advance to the next day entry 
     function next() {
         if (defaults.day == 365 && defaults.year != 2016){
             defaults.year = Number(defaults.year)
@@ -399,16 +351,42 @@ request.onload = function() {
         console.log("The day of the year is now = " + defaults.day);
         console.log("The year is now = " + defaults.year);
         main(defaults.year);
+        this.outerHTML = this.outerHTML; //This is needed to "Reset"the body element to prevent every action from doubling every time its activated. 
     };
-
-    
-    
+    // Defines the function to advance to the previous day entry
+    function previous() {
+        if (defaults.day == 1 && defaults.year != 2017){
+            defaults.year = Number(defaults.year)
+            defaults.year -= 1;
+            defaults.day = 365;
+            console.log("The day of the year is now (non-2016)= " + defaults.day);
+            console.log("The year is now (non-2016) = " + defaults.year);
+        } else if (defaults.day == 1 && defaults.year == 2017){
+            defaults.year = Number(defaults.year)
+            defaults.year -= 1;
+            defaults.day = 366; //2016 is a leap year
+            console.log("The day of the year is now (leap year) = " + defaults.day);
+            console.log("The year is now (leap year) = " + defaults.year);
+        } else {
+            defaults.day -= 1;
+            console.log("The day of the year is now (normal day) = " + defaults.day);
+            console.log("The year is now (normal day) = " + defaults.year);
+        }
+        main(defaults.year); 
+        this.outerHTML = this.outerHTML; //This is needed to "Reset"the body element to prevent every action from doubling every time its activated. 
+        };
+    document.getElementById('next').onclick = next;
+    document.getElementById('previous').onclick = previous;
     document.body.addEventListener("keyup", function(event) {
         if (event.keyCode === 39) {
             console.log("The Enter key was pressed");
             
             event.preventDefault();
             next();
+            this.outerHTML = this.outerHTML;
+        } else if (event.keyCode === 37){
+            event.preventDefault();
+            previous();
             this.outerHTML = this.outerHTML;
         }
     });
