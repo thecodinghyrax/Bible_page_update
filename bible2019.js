@@ -1,20 +1,3 @@
-// Going to leave this in here incase anything changes in the future. As of now, no verse links suggest a different translation.
-// Default bible version to use
-// var version = "NIV";
-// This will take a verse, check for and handle an alternative translation and return a biblegateway link to use as an attribute. 
-// function createLink(verse){
-//     var gatewayLinkMain = "https://www.biblegateway.com/passage/?search=";
-//     if (verse.includes("(")){
-//       verse = verse.split("(");
-//       verse[1].replace(")", "");
-//       link = gatewayLinkMain + verse[0] + "&version=" + verse[1];
-//     }
-//     else {
-//       link = gatewayLinkMain + verse + "&version=" + version;
-//     }
-//     return link
-// }
-
 // This creates a link from the supplied verse. Assmuptions - They will always want the NIV translation.
 function createLink(verse){
     var gatewayLinkMain = "https://www.biblegateway.com/passage/?search=";
@@ -285,6 +268,7 @@ function main(mainYear){
 
 var request = getJsonFile(mainYear);
 
+
 //This is where all the functions are called after the JSON is requested and loaded
 request.onload = function() {
     
@@ -369,7 +353,31 @@ request.onload = function() {
 
     // Defines button function. When pressed - advances the day and reloads the main function or
     // advances the year and resets the day if it is the last day of the year
-    document.getElementById("next").onclick = function () {
+    // document.getElementById("next").onclick = function () {
+    //     if (defaults.day == 365 && defaults.year != 2016){
+    //         defaults.year = Number(defaults.year)
+    //         defaults.year += 1;
+    //         defaults.day = 1
+    //         console.log("The day of the year is now (non-leap year) = " + defaults.day);
+    //         console.log("The year is now (non-leap year) = " + defaults.year);
+    //     } else if (defaults.day == 366 && defaults.year == 2016){
+    //         defaults.year = Number(defaults.year)
+    //         defaults.year += 1;
+    //         defaults.day = 1;
+    //         console.log("The day of the year is now (leap year) = " + defaults.day);
+    //         console.log("The year is now (leap year) = " + defaults.year);
+    //     } else {
+    //         defaults.day += 1;
+    //         console.log("The day of the year is now (normal day) = " + defaults.day);
+    //         console.log("The year is now (normal day) = " + defaults.year);
+    //     }
+       
+    //     console.log("The day of the year is now = " + defaults.day);
+    //     console.log("The year is now = " + defaults.year);
+    //     main(defaults.year);
+    // };
+
+    function next() {
         if (defaults.day == 365 && defaults.year != 2016){
             defaults.year = Number(defaults.year)
             defaults.year += 1;
@@ -392,6 +400,19 @@ request.onload = function() {
         console.log("The year is now = " + defaults.year);
         main(defaults.year);
     };
+
+    
+    
+    document.body.addEventListener("keyup", function(event) {
+        if (event.keyCode === 39) {
+            console.log("The Enter key was pressed");
+            
+            event.preventDefault();
+            next();
+            this.outerHTML = this.outerHTML;
+        }
+    });
+
 
     document.getElementById("search").onclick = function () {
         var x = document.getElementById("input")
