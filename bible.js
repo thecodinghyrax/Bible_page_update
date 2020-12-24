@@ -278,7 +278,7 @@ request.onload = function() {
     var inputField = document.createElement("input");
     inputField.setAttribute("id", "input");
     inputField.setAttribute("type", "date");
-    inputField.setAttribute("value", "2020-01-01");
+    inputField.setAttribute("value", "2021-01-01");
     inputField.setAttribute("min", "2016-01-01");
     inputField.setAttribute("max", "2021-12-31");//This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
     var searchButton = document.createElement("button");
@@ -380,6 +380,7 @@ request.onload = function() {
     document.getElementById("search").onclick = function () {
         var x = document.getElementById("input")
         var searchInput = x.value;
+        console.log("The searchInput is: " + searchInput)
         var inputList = searchInput.split("-");
         defaults.year = inputList[0];
         

@@ -1,7 +1,7 @@
 ﻿{
 "dayText" : {
 "1" : {
-"line1" : "Friday, January 1 — Psalm 1", 
+"line1" : "﻿Friday, January 1 — Psalm 1", 
 "line2" : "1 Chronicles 4:1–23; Acts 9:10–22", 
 "line3" : "You shall not steal; you shall not deal falsely; and you shall not lie to one another. Leviticus 19:11", 
 "line4" : "Finally, all of you, have unity of spirit, sympathy, love for one another, a tender heart, and a humble mind. Do not repay evil for evil or abuse for abuse; but, on the contrary, repay with a blessing. It is for this that you were called—that you might inherit a blessing. 1 Peter 3:8-9", 
@@ -47,12 +47,12 @@
 "line2" : "Watchword for the Epiphany — Arise, shine; for your light has come, and the glory of the Lord has risen upon you. Isaiah 60:1", 
 "line3" : "Wednesday, January 6 — Psalm 5", 
 "line4" : "1 Chronicles 6:31–81; Acts 10:23b–33", 
-"line5" : "Epiphany of the Lord — Isaiah 60:1-6; Psalm 72:1-7;", 
-"line6" : "Psalm 72:10-14; Ephesians 3:1-12; Matthew 2:1-12", 
+"line5" : "Epiphany of the Lord — Isaiah 60:1-6; Psalm 72:1-7,10-14", 
+"line6" : "Ephesians 3:1-12; Matthew 2:1-12", 
 "line7" : "O Lord of hosts, happy is everyone who trusts in you. Psalm 84:12", 
 "line8" : "When the wise men saw that the star had stopped, they were overwhelmed with joy. On entering the house, they saw the child with Mary his mother; and they knelt down and paid him homage. Matthew 2:10-11", 
 "line9" : "Gracious God, thank you for making yourself known to us by your son, Jesus Christ. As we honor the revelation of his birth, we look for the new revelations that he brings to us each day. It is in his name that we pray. Amen.", 
-"line_count": 9
+"line_count": 9 
 }, 
 "7" : { 
 "line1" : "Thursday, January 7 — Psalm 6", 
@@ -1930,18 +1930,19 @@
 "line_count": 5 
 }, 
 "229" : { 
-"line1" : "Saturday, August 21† — Psalm 102:12–22", 
-"line2" : "Jeremiah 19:10–21:10; 1 Timothy 4:1–10", 
-"line3" : "Before they call I will answer, while they are yet speaking I will hear. Isaiah 65:24", 
-"line4" : "God proves his love for us in that while we still were sinners Christ died for us. Romans 5:8", 
-"line5" : "Christ Jesus, the light of your life shrinks the darkness of ours. We thank you for the blessing of your time with us, and ask that your love would always guide us closer to the light of your reign. Amen.", 
-"line_count": 5 
+"line1" : "†On this day in 1732, the first missionaries departed from Herrnhut bound for St. Thomas.", 
+"line2" : "Saturday, August 21† — Psalm 102:12–22", 
+"line3" : "Jeremiah 19:10–21:10; 1 Timothy 4:1–10", 
+"line4" : "Before they call I will answer, while they are yet speaking I will hear. Isaiah 65:24", 
+"line5" : "God proves his love for us in that while we still were sinners Christ died for us. Romans 5:8", 
+"line6" : "Christ Jesus, the light of your life shrinks the darkness of ours. We thank you for the blessing of your time with us, and ask that your love would always guide us closer to the light of your reign. Amen.", 
+"line_count": 6 
 }, 
 "230" : { 
-"line1" : "Thirteenth Sunday after Pentecost - On this day in 1732, the first missionaries departed from Herrnhut bound for St. Thomas.", 
-"line2" : "Sunday, August 22 — Joshua 24:1-2a,14-18; Psalm 34:15-22", 
-"line3" : "Ephesians 6:10-20; John 6:56-59",
-"line4" : "Watchword for the week — Jesus said, “The words that I have spoken to you are spirit and life.” John 6:63",  
+"line1" : "Thirteenth Sunday after Pentecost", 
+"line2" : "Watchword for the week — Jesus said, “The words that I have spoken to you are spirit and life.” John 6:63", 
+"line3" : "Sunday, August 22 — Joshua 24:1-2a,14-18; Psalm 34:15-22", 
+"line4" : "Ephesians 6:10-20; John 6:56-59", 
 "line5" : "I will walk among you, and will be your God, and you shall be my people. Leviticus 26:12", 
 "line6" : "Our fellowship is with the Father and with his son Jesus Christ. We are writing these things so that our joy may be complete. 1 John 1:3-4", 
 "line7" : "You walk among your disciples, Lord. You teach us how to live. Grant that we should always know your presence wherever we roam. In the light of your will. Amen.", 
@@ -2626,10 +2627,10 @@
 "line_count": 5 
 }, 
 "311" : { 
-"line1" : "Chief Elder Festival†", 
-"line2" : "Chief Elder Festival†",
+"line1" : "Chief Elder Festival", 
+"line2" : "†On this day in 1741, it was announced in all Moravian congregations that Jesus Christ had been chosen Chief Elder of the Moravian Church. The Moravian Church has had no single human chief executive since then, and now observes this as a festival day.", 
 "line3" : "Saturday, November 13 — Psalm 124", 
-"line4" : "Daniel 2:34–3:18; 1 John 4:1–16a",
+"line4" : "Daniel 2:34–3:18; 1 John 4:1–16a", 
 "line5" : "Chief Elder Festival† — Ezekiel 34:11-16,23-24; Psalm 8", 
 "line6" : "Hebrews 4:14-16; John 10:1-10", 
 "line7" : "Truly, you are a God who hides himself, O God of Israel, the Savior. Isaiah 45:15", 
@@ -2638,14 +2639,14 @@
 "line_count": 9 
 }, 
 "312" : { 
-"line1" : "Twenty-Fifth Sunday after Pentecost - †On this day in 1741, it was announced in all Moravian congregations that Jesus Christ had been chosen Chief Elder of the Moravian Church. The Moravian Church has had no single human chief executive since then, and now observes this as a festival day.", 
+"line1" : "Twenty-Fifth Sunday after Pentecost", 
 "line2" : "Watchword for the week — Let us hold fast to the confession of our hope without wavering, for God who has promised is faithful. Hebrew 10:23", 
 "line3" : "Sunday, November 14 — Daniel 12:1-3; Psalm 16", 
 "line4" : "Hebrews 10:11-14,(15-18),19-25; Mark 13:1-8", 
 "line5" : "Lift up your voice like a trumpet! Announce to my people their rebellion. Isaiah 58:1", 
 "line6" : "Now, however, that you have come to know God, or rather to be known by God, how can you turn back again to the weak and beggarly elemental spirits? How can you want to be enslaved to them again? Galatians 4:9", 
 "line7" : "Lord, we are blessed to be known by you. We acknowledge times when we have turned our back to your perfect ways of grace, justice, and mercy. Today, we instead turn toward you and lift our voice in praise. Amen.", 
-"line_count": 7
+"line_count": 7 
 }, 
 "313" : { 
 "line1" : "Monday, November 15 — Psalm 125", 
