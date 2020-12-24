@@ -280,7 +280,7 @@ request.onload = function() {
     inputField.setAttribute("type", "date");
     inputField.setAttribute("value", "2020-01-01");
     inputField.setAttribute("min", "2016-01-01");
-    inputField.setAttribute("max", "2020-12-31");//This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
+    inputField.setAttribute("max", "2021-12-31");//This will need to be changed everytime a new year file is added. This will need to be changed after go live. Todo
     var searchButton = document.createElement("button");
     searchButton.setAttribute("id", "search");
     searchButton.innerHTML = "Search";
@@ -299,7 +299,7 @@ request.onload = function() {
     };
     
     //Hides the next button if current day is the last day in the last JSON file
-    if (defaults.day >= 366 && defaults.year == 2020){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Please account for leap year if needed. Todo
+    if (defaults.day >= 366 && defaults.year == 2021){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Please account for leap year if needed. Todo
         document.getElementById("next").style.visibility = "hidden";
     } else {
         document.getElementById("next").style.visibility = "visible";
@@ -308,7 +308,7 @@ request.onload = function() {
     // Defines the funtion to advance to the next day entry 
     function next() {
         this.outerHTML = this.outerHTML;
-        if (defaults.day == 365 && defaults.year != 2016 && defaults.year != 2020){ //Please account for leap year if needed. Todo
+        if (defaults.day == 365 && defaults.year != 2016 && defaults.year != 2021){ //Please account for leap year if needed. Todo
             defaults.year = Number(defaults.year)
             defaults.year += 1;
             defaults.day = 1            
