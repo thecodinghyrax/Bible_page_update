@@ -2028,28 +2028,49 @@
             "line_count": 5
         },
         "96": {
-            "line1": "Tuesday, April 6",
+            "line1": [
+                "\u20201969 Hymnal & Liturgies of the Moravian Church, hymn 553."
+            ],
             "line2": [
+                "Tuesday, April 6"
+            ],
+            "line3": [
                 "Psalm 44:17-26",
                 "Job 9",
                 "Romans 14:1-12"
             ],
-            "line3": "God sets on high those who are lowly, and those who mourn are lifted to safety. Job 5:11",
-            "line4": "Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and the God of all consolation, who consoles us in all our affliction. 2 Corinthians 1:3-4",
-            "line5": "O Savior Christ, thy touch has still its ancient power; no word from thee can fruitless fall. Hear, in the solemn prayerful hour, and in thy mercy heal us all. Amen. \u2020",
-            "line6": "\u20201969 Hymnal & Liturgies of the Moravian Church, hymn 553.",
-            "line7": "Wednesday, April 7",
-            "line8": [
+            "line4": [
+                "God sets on high those who are lowly, and those who mourn are lifted to safety. Job 5:11"
+            ],
+            "line5": [
+                "Blessed be the God and Father of our Lord Jesus Christ, the Father of mercies and the God of all consolation, who consoles us in all our affliction. 2 Corinthians 1:3-4"
+            ],
+            "line6": [
+                "O Savior Christ, thy touch has still its ancient power; no word from thee can fruitless fall. Hear, in the solemn prayerful hour, and in thy mercy heal us all. Amen."
+            ],
+            "line_count": 6
+        },
+        "97": {
+            "line1": [
+                "Wednesday, April 7"
+            ],
+            "line2": [
                 "Psalm 45:1-9",
                 "Job 10",
                 "Romans 14:13-15:2"
             ],
-            "line9": "He bore the sin of many, and made intercession for the transgressors. Isaiah 53:12",
-            "line10": "Jesus said, \u201cBless those who curse you, pray for those who abuse you.\u201d Luke 6:28",
-            "line11": "Compassionate Christ, help us to forgive those who curse us, just as you have interceded for and forgiven us. Guide us to bless and love others as you do. Amen.",
-            "line_count": 11
+            "line3": [
+                "He bore the sin of many, and made intercession for the transgressors. Isaiah 53:12"
+            ],
+            "line4": [
+                "Jesus said, \u201cBless those who curse you, pray for those who abuse you.\u201d Luke 6:28"
+            ],
+            "line5": [
+                "Compassionate Christ, help us to forgive those who curse us, just as you have interceded for and forgiven us. Guide us to bless and love others as you do. Amen."
+            ],
+            "line_count": 5
         },
-        "97": {
+        "98": {
             "line1": [
                 "Thursday, April 8"
             ],
@@ -2069,7 +2090,7 @@
             ],
             "line_count": 5
         },
-        "98": {
+        "99": {
             "line1": [
                 "Friday, April 9"
             ],
@@ -2089,32 +2110,58 @@
             ],
             "line_count": 5
         },
-        "99": {
-            "line1": "Saturday, April 10",
+        "100": {
+            "line1": [
+                "\u20201995 Moravian Book of Worship, hymn 807."
+            ],
             "line2": [
+                "Saturday, April 10"
+            ],
+            "line3": [
                 "Psalm 47",
                 "Job 13:20-14:22",
                 "Romans 15:30-16:7"
             ],
-            "line3": "Do not cast me off in the time of old age; do not forsake me when my strength is spent. Psalm 71:9",
-            "line4": "So we do not lose heart. Even though our outer nature is wasting away, our inner nature is being renewed day by day. 2 Corinthians 4:16",
-            "line5": "Lord, I fear no foe with you at hand to bless, though ills have weight, and tears their bitterness. Where is death\u2019s sting? Where, grave, your victory? I triumph still if you abide with me. Amen.\u2020",
-            "line6": "\u20201995 Moravian Book of Worship, hymn 807.",
-            "line7": "Second Sunday of Easter",
-            "line8": "Watchword for the week \u2014 If we walk in the light as God is in the light, we have fellowship with one another, and the blood of Jesus his Son cleanses us from all sin. 1 John 1:7",
-            "line9": "Sunday, April 11",
-            "line10": [
+            "line4": [
+                "Do not cast me off in the time of old age; do not forsake me when my strength is spent. Psalm 71:9"
+            ],
+            "line5": [
+                "So we do not lose heart. Even though our outer nature is wasting away, our inner nature is being renewed day by day. 2 Corinthians 4:16"
+            ],
+            "line6": [
+                "Lord, I fear no foe with you at hand to bless, though ills have weight, and tears their bitterness. Where is death\u2019s sting? Where, grave, your victory? I triumph still if you abide with me. Amen."
+            ],
+            "line_count": 6
+        },
+        "101": {
+            "line1": [
+                "Second Sunday of Easter"
+            ],
+            "line2": [
+                "Watchword for the week",
+                "If we walk in the light as God is in the light, we have fellowship with one another, and the blood of Jesus his Son cleanses us from all sin. 1 John 1:7"
+            ],
+            "line3": [
+                "Sunday, April 11"
+            ],
+            "line4": [
                 "Acts 4:32-35",
                 "Psalm 133",
                 "1 John 1:1-2:2",
                 "John 20:19-31"
             ],
-            "line11": "If riches increase, do not set your heart on them. Psalm 62:10",
-            "line12": "Where your treasure is, there your heart will be also. Matthew 6:21",
-            "line13": "Where is our treasure, Lord? Help us to offer open and giving hands to you and to your people, destroying barriers of greed that can shield us from you. Amen.",
-            "line_count": 13
+            "line5": [
+                "If riches increase, do not set your heart on them. Psalm 62:10"
+            ],
+            "line6": [
+                "Where your treasure is, there your heart will be also. Matthew 6:21"
+            ],
+            "line7": [
+                "Where is our treasure, Lord? Help us to offer open and giving hands to you and to your people, destroying barriers of greed that can shield us from you. Amen."
+            ],
+            "line_count": 7
         },
-        "100": {
+        "102": {
             "line1": [
                 "Monday, April 12"
             ],
@@ -2134,29 +2181,50 @@
             ],
             "line_count": 5
         },
-        "101": {
-            "line1": "Tuesday, April 13",
+        "103": {
+            "line1": [
+                "\u20201995 Moravian Book of Worship."
+            ],
             "line2": [
+                "Tuesday, April 13"
+            ],
+            "line3": [
                 "Psalm 49:1-12",
                 "Job 17,18",
                 "Romans 16:21-1 Corinthians 1:1-9"
             ],
-            "line3": "Wash your heart clean of wickedness so that you may be saved. How long shall your evil schemes lodge within you? Jeremiah 4:14",
-            "line4": "John said, \u201cBear fruits worthy of repentance.\u201d Luke 3:8",
-            "line5": "Most merciful God, we confess that we have sinned against you in thought, word, and deed, by what we have done, and by what we have left undone. For the sake of your Son, have mercy on us and forgive us. Amen. \u2020",
-            "line6": "\u20201995 Moravian Book of Worship.",
-            "line7": "Wednesday, April 14",
-            "line8": [
+            "line4": [
+                "Wash your heart clean of wickedness so that you may be saved. How long shall your evil schemes lodge within you? Jeremiah 4:14"
+            ],
+            "line5": [
+                "John said, \u201cBear fruits worthy of repentance.\u201d Luke 3:8"
+            ],
+            "line6": [
+                "Most merciful God, we confess that we have sinned against you in thought, word, and deed, by what we have done, and by what we have left undone. For the sake of your Son, have mercy on us and forgive us. Amen."
+            ],
+            "line_count": 6
+        },
+        "104": {
+            "line1": [
+                "Wednesday, April 14"
+            ],
+            "line2": [
                 "Psalm 49:13-20",
                 "Job 19",
                 "1 Corinthians 1:10-20"
             ],
-            "line9": "The Lord had made them joyful. Ezra 6:22",
-            "line10": "Rejoice that your names are written in heaven. Luke 10:20",
-            "line11": "You guide us, our good Shepherd, leading us both in ways seen and unseen. We celebrate your presence with us. Help us to feel the joy of living in you. Amen.",
-            "line_count": 11
+            "line3": [
+                "The Lord had made them joyful. Ezra 6:22"
+            ],
+            "line4": [
+                "Rejoice that your names are written in heaven. Luke 10:20"
+            ],
+            "line5": [
+                "You guide us, our good Shepherd, leading us both in ways seen and unseen. We celebrate your presence with us. Help us to feel the joy of living in you. Amen."
+            ],
+            "line_count": 5
         },
-        "102": {
+        "105": {
             "line1": [
                 "Thursday, April 15"
             ],
@@ -2176,7 +2244,7 @@
             ],
             "line_count": 5
         },
-        "103": {
+        "106": {
             "line1": [
                 "Friday, April 16"
             ],
@@ -2196,7 +2264,7 @@
             ],
             "line_count": 5
         },
-        "104": {
+        "107": {
             "line1": [
                 "Saturday, April 17"
             ],
@@ -2216,7 +2284,7 @@
             ],
             "line_count": 5
         },
-        "105": {
+        "108": {
             "line1": [
                 "Third Sunday of Easter"
             ],
@@ -2244,7 +2312,7 @@
             ],
             "line_count": 7
         },
-        "106": {
+        "109": {
             "line1": [
                 "Monday, April 19"
             ],
@@ -2264,7 +2332,7 @@
             ],
             "line_count": 5
         },
-        "107": {
+        "110": {
             "line1": [
                 "Tuesday, April 20"
             ],
@@ -2284,7 +2352,7 @@
             ],
             "line_count": 5
         },
-        "108": {
+        "111": {
             "line1": [
                 "Wednesday, April 21"
             ],
@@ -2304,7 +2372,7 @@
             ],
             "line_count": 5
         },
-        "109": {
+        "112": {
             "line1": [
                 "Thursday, April 22"
             ],
@@ -2324,7 +2392,7 @@
             ],
             "line_count": 5
         },
-        "110": {
+        "113": {
             "line1": [
                 "Friday, April 23"
             ],
@@ -2344,7 +2412,7 @@
             ],
             "line_count": 5
         },
-        "111": {
+        "114": {
             "line1": [
                 "Saturday, April 24"
             ],
@@ -2364,7 +2432,7 @@
             ],
             "line_count": 5
         },
-        "112": {
+        "115": {
             "line1": [
                 "Fourth Sunday of Easter"
             ],
@@ -2392,7 +2460,7 @@
             ],
             "line_count": 7
         },
-        "113": {
+        "116": {
             "line1": [
                 "Monday, April 26"
             ],
@@ -2412,7 +2480,7 @@
             ],
             "line_count": 5
         },
-        "114": {
+        "117": {
             "line1": [
                 "Tuesday, April 27"
             ],
@@ -2432,7 +2500,7 @@
             ],
             "line_count": 5
         },
-        "115": {
+        "118": {
             "line1": [
                 "Wednesday, April 28"
             ],
@@ -2452,7 +2520,7 @@
             ],
             "line_count": 5
         },
-        "116": {
+        "119": {
             "line1": [
                 "Thursday, April 29"
             ],
@@ -2472,7 +2540,7 @@
             ],
             "line_count": 5
         },
-        "117": {
+        "120": {
             "line1": [
                 "Friday, April 30"
             ],
@@ -2492,7 +2560,7 @@
             ],
             "line_count": 5
         },
-        "118": {
+        "121": {
             "line1": [
                 "Saturday, May 1"
             ],
@@ -2512,7 +2580,7 @@
             ],
             "line_count": 5
         },
-        "119": {
+        "122": {
             "line1": [
                 "Fifth Sunday of Easter"
             ],
@@ -2540,7 +2608,7 @@
             ],
             "line_count": 7
         },
-        "120": {
+        "123": {
             "line1": [
                 "Monday, May 3"
             ],
@@ -2560,7 +2628,7 @@
             ],
             "line_count": 5
         },
-        "121": {
+        "124": {
             "line1": [
                 "Tuesday, May 4"
             ],
@@ -2580,7 +2648,7 @@
             ],
             "line_count": 5
         },
-        "122": {
+        "125": {
             "line1": [
                 "Wednesday, May 5"
             ],
@@ -2600,7 +2668,7 @@
             ],
             "line_count": 5
         },
-        "123": {
+        "126": {
             "line1": [
                 "Thursday, May 6"
             ],
@@ -2620,7 +2688,7 @@
             ],
             "line_count": 5
         },
-        "124": {
+        "127": {
             "line1": [
                 "Friday, May 7"
             ],
@@ -2640,7 +2708,7 @@
             ],
             "line_count": 5
         },
-        "125": {
+        "128": {
             "line1": [
                 "Saturday, May 8"
             ],
@@ -2660,7 +2728,7 @@
             ],
             "line_count": 5
         },
-        "126": {
+        "129": {
             "line1": [
                 "Sixth Sunday of Easter"
             ],
@@ -2688,7 +2756,7 @@
             ],
             "line_count": 7
         },
-        "127": {
+        "130": {
             "line1": [
                 "Monday, May 10"
             ],
@@ -2708,7 +2776,7 @@
             ],
             "line_count": 5
         },
-        "128": {
+        "131": {
             "line1": [
                 "Tuesday, May 11"
             ],
@@ -2728,7 +2796,7 @@
             ],
             "line_count": 5
         },
-        "129": {
+        "132": {
             "line1": [
                 "Wednesday, May 12"
             ],
@@ -2748,7 +2816,7 @@
             ],
             "line_count": 5
         },
-        "130": {
+        "133": {
             "line1": [
                 "Ascension Day"
             ],
@@ -2784,7 +2852,7 @@
             ],
             "line_count": 9
         },
-        "131": {
+        "134": {
             "line1": [
                 "Friday, May 14"
             ],
@@ -2804,7 +2872,7 @@
             ],
             "line_count": 5
         },
-        "132": {
+        "135": {
             "line1": [
                 "Saturday, May 15"
             ],
@@ -2824,7 +2892,7 @@
             ],
             "line_count": 5
         },
-        "133": {
+        "136": {
             "line1": [
                 "Ascension Sunday"
             ],
@@ -2852,7 +2920,7 @@
             ],
             "line_count": 7
         },
-        "134": {
+        "137": {
             "line1": [
                 "Monday, May 17"
             ],
@@ -2872,7 +2940,7 @@
             ],
             "line_count": 5
         },
-        "135": {
+        "138": {
             "line1": [
                 "Tuesday, May 18"
             ],
@@ -2892,7 +2960,7 @@
             ],
             "line_count": 5
         },
-        "136": {
+        "139": {
             "line1": [
                 "Wednesday, May 19"
             ],
@@ -2912,7 +2980,7 @@
             ],
             "line_count": 5
         },
-        "137": {
+        "140": {
             "line1": [
                 "Thursday, May 20"
             ],
@@ -2932,7 +3000,7 @@
             ],
             "line_count": 5
         },
-        "138": {
+        "141": {
             "line1": [
                 "Friday, May 21"
             ],
@@ -2952,7 +3020,7 @@
             ],
             "line_count": 5
         },
-        "139": {
+        "142": {
             "line1": [
                 "Saturday, May 22"
             ],
@@ -2972,7 +3040,7 @@
             ],
             "line_count": 5
         },
-        "140": {
+        "143": {
             "line1": [
                 "Day of Pentecost"
             ],
@@ -3000,7 +3068,7 @@
             ],
             "line_count": 7
         },
-        "141": {
+        "144": {
             "line1": [
                 "Monday, May 24"
             ],
@@ -3020,7 +3088,7 @@
             ],
             "line_count": 5
         },
-        "142": {
+        "145": {
             "line1": [
                 "Tuesday, May 25"
             ],
@@ -3040,7 +3108,7 @@
             ],
             "line_count": 5
         },
-        "143": {
+        "146": {
             "line1": [
                 "Wednesday, May 26"
             ],
@@ -3060,7 +3128,7 @@
             ],
             "line_count": 5
         },
-        "144": {
+        "147": {
             "line1": [
                 "Thursday, May 27"
             ],
@@ -3080,7 +3148,7 @@
             ],
             "line_count": 5
         },
-        "145": {
+        "148": {
             "line1": [
                 "Friday, May 28"
             ],
@@ -3100,7 +3168,7 @@
             ],
             "line_count": 5
         },
-        "146": {
+        "149": {
             "line1": [
                 "Saturday, May 29"
             ],
@@ -3120,7 +3188,7 @@
             ],
             "line_count": 5
         },
-        "147": {
+        "150": {
             "line1": [
                 "Trinity Sunday"
             ],
@@ -3148,7 +3216,7 @@
             ],
             "line_count": 7
         },
-        "148": {
+        "151": {
             "line1": [
                 "Monday, May 31"
             ],
@@ -3168,7 +3236,7 @@
             ],
             "line_count": 5
         },
-        "149": {
+        "152": {
             "line1": [
                 "Tuesday, June 1"
             ],
@@ -3188,7 +3256,7 @@
             ],
             "line_count": 5
         },
-        "150": {
+        "153": {
             "line1": [
                 "Wednesday, June 2"
             ],
@@ -3208,7 +3276,7 @@
             ],
             "line_count": 5
         },
-        "151": {
+        "154": {
             "line1": [
                 "Thursday, June 3"
             ],
@@ -3228,7 +3296,7 @@
             ],
             "line_count": 5
         },
-        "152": {
+        "155": {
             "line1": [
                 "Friday, June 4"
             ],
@@ -3248,7 +3316,7 @@
             ],
             "line_count": 5
         },
-        "153": {
+        "156": {
             "line1": [
                 "Saturday, June 5"
             ],
@@ -3268,7 +3336,7 @@
             ],
             "line_count": 5
         },
-        "154": {
+        "157": {
             "line1": [
                 "Second Sunday after Pentecost"
             ],
@@ -3296,7 +3364,7 @@
             ],
             "line_count": 7
         },
-        "155": {
+        "158": {
             "line1": [
                 "Monday, June 7"
             ],
@@ -3316,7 +3384,7 @@
             ],
             "line_count": 5
         },
-        "156": {
+        "159": {
             "line1": [
                 "Tuesday, June 8"
             ],
@@ -3336,7 +3404,7 @@
             ],
             "line_count": 5
         },
-        "157": {
+        "160": {
             "line1": [
                 "Wednesday, June 9"
             ],
@@ -3356,7 +3424,7 @@
             ],
             "line_count": 5
         },
-        "158": {
+        "161": {
             "line1": [
                 "Thursday, June 10"
             ],
@@ -3376,7 +3444,7 @@
             ],
             "line_count": 5
         },
-        "159": {
+        "162": {
             "line1": [
                 "Friday, June 11"
             ],
@@ -3396,7 +3464,7 @@
             ],
             "line_count": 5
         },
-        "160": {
+        "163": {
             "line1": [
                 "Saturday, June 12"
             ],
@@ -3416,7 +3484,7 @@
             ],
             "line_count": 5
         },
-        "161": {
+        "164": {
             "line1": [
                 "Third Sunday after Pentecost"
             ],
@@ -3444,7 +3512,7 @@
             ],
             "line_count": 7
         },
-        "162": {
+        "165": {
             "line1": [
                 "Monday, June 14"
             ],
@@ -3464,7 +3532,7 @@
             ],
             "line_count": 5
         },
-        "163": {
+        "166": {
             "line1": [
                 "Tuesday, June 15"
             ],
@@ -3484,7 +3552,7 @@
             ],
             "line_count": 5
         },
-        "164": {
+        "167": {
             "line1": [
                 "Wednesday, June 16"
             ],
@@ -3504,7 +3572,7 @@
             ],
             "line_count": 5
         },
-        "165": {
+        "168": {
             "line1": [
                 "Thursday, June 17"
             ],
@@ -3524,7 +3592,7 @@
             ],
             "line_count": 5
         },
-        "166": {
+        "169": {
             "line1": [
                 "Friday, June 18"
             ],
@@ -3544,7 +3612,7 @@
             ],
             "line_count": 5
         },
-        "167": {
+        "170": {
             "line1": [
                 "Saturday, June 19"
             ],
@@ -3564,7 +3632,7 @@
             ],
             "line_count": 5
         },
-        "168": {
+        "171": {
             "line1": [
                 "Fourth Sunday after Pentecost"
             ],
@@ -3592,7 +3660,7 @@
             ],
             "line_count": 7
         },
-        "169": {
+        "172": {
             "line1": [
                 "Monday, June 21"
             ],
@@ -3612,7 +3680,7 @@
             ],
             "line_count": 5
         },
-        "170": {
+        "173": {
             "line1": [
                 "Tuesday, June 22"
             ],
@@ -3632,7 +3700,7 @@
             ],
             "line_count": 5
         },
-        "171": {
+        "174": {
             "line1": [
                 "Wednesday, June 23"
             ],
@@ -3652,7 +3720,7 @@
             ],
             "line_count": 5
         },
-        "172": {
+        "175": {
             "line1": [
                 "Thursday, June 24"
             ],
@@ -3672,7 +3740,7 @@
             ],
             "line_count": 5
         },
-        "173": {
+        "176": {
             "line1": [
                 "Friday, June 25"
             ],
@@ -3692,7 +3760,7 @@
             ],
             "line_count": 5
         },
-        "174": {
+        "177": {
             "line1": [
                 "Saturday, June 26"
             ],
@@ -3712,7 +3780,7 @@
             ],
             "line_count": 5
         },
-        "175": {
+        "178": {
             "line1": [
                 "Fifth Sunday after Pentecost"
             ],
@@ -3740,7 +3808,7 @@
             ],
             "line_count": 7
         },
-        "176": {
+        "179": {
             "line1": [
                 "Monday, June 28"
             ],
@@ -3760,7 +3828,7 @@
             ],
             "line_count": 5
         },
-        "177": {
+        "180": {
             "line1": [
                 "Tuesday, June 29"
             ],
@@ -3780,7 +3848,7 @@
             ],
             "line_count": 5
         },
-        "178": {
+        "181": {
             "line1": [
                 "Wednesday, June 30"
             ],
@@ -3800,7 +3868,7 @@
             ],
             "line_count": 5
         },
-        "179": {
+        "182": {
             "line1": [
                 "Thursday, July 1"
             ],
@@ -3820,7 +3888,7 @@
             ],
             "line_count": 5
         },
-        "180": {
+        "183": {
             "line1": [
                 "Friday, July 2"
             ],
@@ -3840,7 +3908,7 @@
             ],
             "line_count": 5
         },
-        "181": {
+        "184": {
             "line1": [
                 "Saturday, July 3"
             ],
@@ -3860,7 +3928,7 @@
             ],
             "line_count": 5
         },
-        "182": {
+        "185": {
             "line1": [
                 "Sixth Sunday after Pentecost"
             ],
@@ -3888,7 +3956,7 @@
             ],
             "line_count": 7
         },
-        "183": {
+        "186": {
             "line1": [
                 "Monday, July 5"
             ],
@@ -3908,7 +3976,7 @@
             ],
             "line_count": 5
         },
-        "184": {
+        "187": {
             "line1": [
                 "John Hus Festival\u2020 \u2014 Isaiah 49:1-7; Psalm 135:1-13"
             ],
@@ -3934,7 +4002,7 @@
             ],
             "line_count": 7
         },
-        "185": {
+        "188": {
             "line1": [
                 "\u2020On July 6, 1415, John Hus was martyred at the Council of Constance."
             ],
@@ -3957,7 +4025,7 @@
             ],
             "line_count": 6
         },
-        "186": {
+        "189": {
             "line1": [
                 "Thursday, July 8"
             ],
@@ -3977,7 +4045,7 @@
             ],
             "line_count": 5
         },
-        "187": {
+        "190": {
             "line1": [
                 "Friday, July 9"
             ],
@@ -3997,7 +4065,7 @@
             ],
             "line_count": 5
         },
-        "188": {
+        "191": {
             "line1": [
                 "Saturday, July 10"
             ],
@@ -4017,7 +4085,7 @@
             ],
             "line_count": 5
         },
-        "189": {
+        "192": {
             "line1": [
                 "Seventh Sunday after Pentecost"
             ],
@@ -4045,7 +4113,7 @@
             ],
             "line_count": 7
         },
-        "190": {
+        "193": {
             "line1": [
                 "Monday, July 12"
             ],
@@ -4065,7 +4133,7 @@
             ],
             "line_count": 5
         },
-        "191": {
+        "194": {
             "line1": [
                 "Tuesday, July 13"
             ],
@@ -4085,7 +4153,7 @@
             ],
             "line_count": 5
         },
-        "192": {
+        "195": {
             "line1": [
                 "Wednesday, July 14"
             ],
@@ -4105,7 +4173,7 @@
             ],
             "line_count": 5
         },
-        "193": {
+        "196": {
             "line1": [
                 "Thursday, July 15"
             ],
@@ -4125,7 +4193,7 @@
             ],
             "line_count": 5
         },
-        "194": {
+        "197": {
             "line1": [
                 "Friday, July 16"
             ],
@@ -4145,7 +4213,7 @@
             ],
             "line_count": 5
         },
-        "195": {
+        "198": {
             "line1": [
                 "Saturday, July 17"
             ],
@@ -4165,7 +4233,7 @@
             ],
             "line_count": 5
         },
-        "196": {
+        "199": {
             "line1": [
                 "Eighth Sunday after Pentecost"
             ],
@@ -4193,7 +4261,7 @@
             ],
             "line_count": 7
         },
-        "197": {
+        "200": {
             "line1": [
                 "Monday, July 19"
             ],
@@ -4213,7 +4281,7 @@
             ],
             "line_count": 5
         },
-        "198": {
+        "201": {
             "line1": [
                 "Tuesday, July 20"
             ],
@@ -4233,7 +4301,7 @@
             ],
             "line_count": 5
         },
-        "199": {
+        "202": {
             "line1": [
                 "Wednesday, July 21"
             ],
@@ -4253,7 +4321,7 @@
             ],
             "line_count": 5
         },
-        "200": {
+        "203": {
             "line1": [
                 "Thursday, July 22"
             ],
@@ -4273,7 +4341,7 @@
             ],
             "line_count": 5
         },
-        "201": {
+        "204": {
             "line1": [
                 "Friday, July 23"
             ],
@@ -4293,7 +4361,7 @@
             ],
             "line_count": 5
         },
-        "202": {
+        "205": {
             "line1": [
                 "Saturday, July 24"
             ],
@@ -4313,7 +4381,7 @@
             ],
             "line_count": 5
         },
-        "203": {
+        "206": {
             "line1": [
                 "Ninth Sunday after Pentecost"
             ],
@@ -4341,7 +4409,7 @@
             ],
             "line_count": 7
         },
-        "204": {
+        "207": {
             "line1": [
                 "Monday, July 26"
             ],
@@ -4361,7 +4429,7 @@
             ],
             "line_count": 5
         },
-        "205": {
+        "208": {
             "line1": [
                 "Tuesday, July 27"
             ],
@@ -4381,7 +4449,7 @@
             ],
             "line_count": 5
         },
-        "206": {
+        "209": {
             "line1": [
                 "Wednesday, July 28"
             ],
@@ -4401,7 +4469,7 @@
             ],
             "line_count": 5
         },
-        "207": {
+        "210": {
             "line1": [
                 "Thursday, July 29"
             ],
@@ -4421,7 +4489,7 @@
             ],
             "line_count": 5
         },
-        "208": {
+        "211": {
             "line1": [
                 "Friday, July 30"
             ],
@@ -4441,7 +4509,7 @@
             ],
             "line_count": 5
         },
-        "209": {
+        "212": {
             "line1": [
                 "Saturday, July 31"
             ],
@@ -4461,7 +4529,7 @@
             ],
             "line_count": 5
         },
-        "210": {
+        "213": {
             "line1": [
                 "Tenth Sunday after Pentecost"
             ],
@@ -4489,7 +4557,7 @@
             ],
             "line_count": 7
         },
-        "211": {
+        "214": {
             "line1": [
                 "Monday, August 2"
             ],
@@ -4509,7 +4577,7 @@
             ],
             "line_count": 5
         },
-        "212": {
+        "215": {
             "line1": [
                 "Tuesday, August 3"
             ],
@@ -4529,7 +4597,7 @@
             ],
             "line_count": 5
         },
-        "213": {
+        "216": {
             "line1": [
                 "Wednesday, August 4"
             ],
@@ -4549,7 +4617,7 @@
             ],
             "line_count": 5
         },
-        "214": {
+        "217": {
             "line1": [
                 "Thursday, August 5"
             ],
@@ -4569,7 +4637,7 @@
             ],
             "line_count": 5
         },
-        "215": {
+        "218": {
             "line1": [
                 "Friday, August 6"
             ],
@@ -4589,7 +4657,7 @@
             ],
             "line_count": 5
         },
-        "216": {
+        "219": {
             "line1": [
                 "Saturday, August 7"
             ],
@@ -4609,7 +4677,7 @@
             ],
             "line_count": 5
         },
-        "217": {
+        "220": {
             "line1": [
                 "Eleventh Sunday after Pentecost"
             ],
@@ -4637,7 +4705,7 @@
             ],
             "line_count": 7
         },
-        "218": {
+        "221": {
             "line1": [
                 "Monday, August 9"
             ],
@@ -4657,7 +4725,7 @@
             ],
             "line_count": 5
         },
-        "219": {
+        "222": {
             "line1": [
                 "Tuesday, August 10"
             ],
@@ -4677,7 +4745,7 @@
             ],
             "line_count": 5
         },
-        "220": {
+        "223": {
             "line1": [
                 "Wednesday, August 11"
             ],
@@ -4697,7 +4765,7 @@
             ],
             "line_count": 5
         },
-        "221": {
+        "224": {
             "line1": [
                 "Thursday, August 12"
             ],
@@ -4717,7 +4785,7 @@
             ],
             "line_count": 5
         },
-        "222": {
+        "225": {
             "line1": [
                 "August Thirteenth Festival\u2020 \u2014 Joshua 24:16-24; Psalm 133"
             ],
@@ -4743,7 +4811,7 @@
             ],
             "line_count": 7
         },
-        "223": {
+        "226": {
             "line1": [
                 "\u2020 On this date in 1727 in Berthelsdorf, Saxony (now Germany), a group of quarreling Christians experienced their unity in Christ through the power of the Holy Spirit. This new Pentecost marked the revival of the Unity of the Brethren, begun in 1457, and the beginning of the Renewed Moravian Church."
             ],
@@ -4766,7 +4834,7 @@
             ],
             "line_count": 6
         },
-        "224": {
+        "227": {
             "line1": [
                 "Twelfth Sunday after Pentecost"
             ],
@@ -4794,7 +4862,7 @@
             ],
             "line_count": 7
         },
-        "225": {
+        "228": {
             "line1": [
                 "Monday, August 16"
             ],
@@ -4814,7 +4882,7 @@
             ],
             "line_count": 5
         },
-        "226": {
+        "229": {
             "line1": [
                 "Tuesday, August 17"
             ],
@@ -4834,7 +4902,7 @@
             ],
             "line_count": 5
         },
-        "227": {
+        "230": {
             "line1": [
                 "Wednesday, August 18"
             ],
@@ -4854,7 +4922,7 @@
             ],
             "line_count": 5
         },
-        "228": {
+        "231": {
             "line1": [
                 "Thursday, August 19"
             ],
@@ -4874,7 +4942,7 @@
             ],
             "line_count": 5
         },
-        "229": {
+        "232": {
             "line1": [
                 "Friday, August 20"
             ],
@@ -4894,7 +4962,7 @@
             ],
             "line_count": 5
         },
-        "230": {
+        "233": {
             "line1": [
                 "\u2020On this day in 1732, the first missionaries departed from Herrnhut bound for St. Thomas."
             ],
@@ -4917,7 +4985,7 @@
             ],
             "line_count": 6
         },
-        "231": {
+        "234": {
             "line1": [
                 "Thirteenth Sunday after Pentecost"
             ],
@@ -4945,7 +5013,7 @@
             ],
             "line_count": 7
         },
-        "232": {
+        "235": {
             "line1": [
                 "Monday, August 23"
             ],
@@ -4965,7 +5033,7 @@
             ],
             "line_count": 5
         },
-        "233": {
+        "236": {
             "line1": [
                 "Tuesday, August 24"
             ],
@@ -4985,7 +5053,7 @@
             ],
             "line_count": 5
         },
-        "234": {
+        "237": {
             "line1": [
                 "Wednesday, August 25"
             ],
@@ -5005,7 +5073,7 @@
             ],
             "line_count": 5
         },
-        "235": {
+        "238": {
             "line1": [
                 "Thursday, August 26"
             ],
@@ -5025,7 +5093,7 @@
             ],
             "line_count": 5
         },
-        "236": {
+        "239": {
             "line1": [
                 "Friday, August 27"
             ],
@@ -5045,7 +5113,7 @@
             ],
             "line_count": 5
         },
-        "237": {
+        "240": {
             "line1": [
                 "Saturday, August 28"
             ],
@@ -5065,7 +5133,7 @@
             ],
             "line_count": 5
         },
-        "238": {
+        "241": {
             "line1": [
                 "Fourteenth Sunday after Pentecost"
             ],
@@ -5093,7 +5161,7 @@
             ],
             "line_count": 7
         },
-        "239": {
+        "242": {
             "line1": [
                 "Monday, August 30"
             ],
@@ -5113,7 +5181,7 @@
             ],
             "line_count": 5
         },
-        "240": {
+        "243": {
             "line1": [
                 "Tuesday, August 31"
             ],
@@ -5133,7 +5201,7 @@
             ],
             "line_count": 5
         },
-        "241": {
+        "244": {
             "line1": [
                 "Wednesday, September 1"
             ],
@@ -5153,7 +5221,7 @@
             ],
             "line_count": 5
         },
-        "242": {
+        "245": {
             "line1": [
                 "Thursday, September 2"
             ],
@@ -5173,7 +5241,7 @@
             ],
             "line_count": 5
         },
-        "243": {
+        "246": {
             "line1": [
                 "Friday, September 3"
             ],
@@ -5193,7 +5261,7 @@
             ],
             "line_count": 5
         },
-        "244": {
+        "247": {
             "line1": [
                 "Saturday, September 4"
             ],
@@ -5213,7 +5281,7 @@
             ],
             "line_count": 5
         },
-        "245": {
+        "248": {
             "line1": [
                 "Fifteenth Sunday after Pentecost"
             ],
@@ -5241,7 +5309,7 @@
             ],
             "line_count": 7
         },
-        "246": {
+        "249": {
             "line1": [
                 "Monday, September 6"
             ],
@@ -5261,7 +5329,7 @@
             ],
             "line_count": 5
         },
-        "247": {
+        "250": {
             "line1": [
                 "Tuesday, September 7"
             ],
@@ -5281,7 +5349,7 @@
             ],
             "line_count": 5
         },
-        "248": {
+        "251": {
             "line1": [
                 "Wednesday, September 8"
             ],
@@ -5301,7 +5369,7 @@
             ],
             "line_count": 5
         },
-        "249": {
+        "252": {
             "line1": [
                 "Thursday, September 9"
             ],
@@ -5321,7 +5389,7 @@
             ],
             "line_count": 5
         },
-        "250": {
+        "253": {
             "line1": [
                 "Friday, September 10"
             ],
@@ -5341,7 +5409,7 @@
             ],
             "line_count": 5
         },
-        "251": {
+        "254": {
             "line1": [
                 "Saturday, September 11"
             ],
@@ -5361,7 +5429,7 @@
             ],
             "line_count": 5
         },
-        "252": {
+        "255": {
             "line1": [
                 "Sixteenth Sunday after Pentecost"
             ],
@@ -5389,7 +5457,7 @@
             ],
             "line_count": 7
         },
-        "253": {
+        "256": {
             "line1": [
                 "Monday, September 13"
             ],
@@ -5409,7 +5477,7 @@
             ],
             "line_count": 5
         },
-        "254": {
+        "257": {
             "line1": [
                 "Tuesday, September 14"
             ],
@@ -5429,7 +5497,7 @@
             ],
             "line_count": 5
         },
-        "255": {
+        "258": {
             "line1": [
                 "Wednesday, September 15"
             ],
@@ -5449,7 +5517,7 @@
             ],
             "line_count": 5
         },
-        "256": {
+        "259": {
             "line1": [
                 "Ministers\u2019 Covenant Day\u2020"
             ],
@@ -5472,7 +5540,7 @@
             ],
             "line_count": 6
         },
-        "257": {
+        "260": {
             "line1": [
                 "\u2020During a synodal conference in London, Jesus Christ was recognized as chief elder of the Brethren\u2019s Church. The day is observed as a covenanting day for servants of the church."
             ],
@@ -5495,7 +5563,7 @@
             ],
             "line_count": 6
         },
-        "258": {
+        "261": {
             "line1": [
                 "Saturday, September 18"
             ],
@@ -5515,7 +5583,7 @@
             ],
             "line_count": 5
         },
-        "259": {
+        "262": {
             "line1": [
                 "Seventeenth Sunday after Pentecost"
             ],
@@ -5543,7 +5611,7 @@
             ],
             "line_count": 7
         },
-        "260": {
+        "263": {
             "line1": [
                 "Monday, September 20"
             ],
@@ -5563,7 +5631,7 @@
             ],
             "line_count": 5
         },
-        "261": {
+        "264": {
             "line1": [
                 "Tuesday, September 21"
             ],
@@ -5583,7 +5651,7 @@
             ],
             "line_count": 5
         },
-        "262": {
+        "265": {
             "line1": [
                 "Wednesday, September 22"
             ],
@@ -5603,7 +5671,7 @@
             ],
             "line_count": 5
         },
-        "263": {
+        "266": {
             "line1": [
                 "Thursday, September 23"
             ],
@@ -5623,7 +5691,7 @@
             ],
             "line_count": 5
         },
-        "264": {
+        "267": {
             "line1": [
                 "Friday, September 24"
             ],
@@ -5643,7 +5711,7 @@
             ],
             "line_count": 5
         },
-        "265": {
+        "268": {
             "line1": [
                 "Saturday, September 25"
             ],
@@ -5663,7 +5731,7 @@
             ],
             "line_count": 5
         },
-        "266": {
+        "269": {
             "line1": [
                 "Eighteenth Sunday after Pentecost"
             ],
@@ -5691,7 +5759,7 @@
             ],
             "line_count": 7
         },
-        "267": {
+        "270": {
             "line1": [
                 "Monday, September 27"
             ],
@@ -5711,7 +5779,7 @@
             ],
             "line_count": 5
         },
-        "268": {
+        "271": {
             "line1": [
                 "Tuesday, September 28"
             ],
@@ -5731,7 +5799,7 @@
             ],
             "line_count": 5
         },
-        "269": {
+        "272": {
             "line1": [
                 "Wednesday, September 29"
             ],
@@ -5751,7 +5819,7 @@
             ],
             "line_count": 5
         },
-        "270": {
+        "273": {
             "line1": [
                 "Thursday, September 30"
             ],
@@ -5771,7 +5839,7 @@
             ],
             "line_count": 5
         },
-        "271": {
+        "274": {
             "line1": [
                 "Friday, October 1"
             ],
@@ -5791,7 +5859,7 @@
             ],
             "line_count": 5
         },
-        "272": {
+        "275": {
             "line1": [
                 "Saturday, October 2"
             ],
@@ -5811,7 +5879,7 @@
             ],
             "line_count": 5
         },
-        "273": {
+        "276": {
             "line1": [
                 "Nineteenth Sunday after Pentecost"
             ],
@@ -5839,7 +5907,7 @@
             ],
             "line_count": 7
         },
-        "274": {
+        "277": {
             "line1": [
                 "Monday, October 4"
             ],
@@ -5859,7 +5927,7 @@
             ],
             "line_count": 5
         },
-        "275": {
+        "278": {
             "line1": [
                 "Tuesday, October 5"
             ],
@@ -5879,7 +5947,7 @@
             ],
             "line_count": 5
         },
-        "276": {
+        "279": {
             "line1": [
                 "Wednesday, October 6"
             ],
@@ -5899,7 +5967,7 @@
             ],
             "line_count": 5
         },
-        "277": {
+        "280": {
             "line1": [
                 "Thursday, October 7"
             ],
@@ -5919,7 +5987,7 @@
             ],
             "line_count": 5
         },
-        "278": {
+        "281": {
             "line1": [
                 "Friday, October 8"
             ],
@@ -5939,7 +6007,7 @@
             ],
             "line_count": 5
         },
-        "279": {
+        "282": {
             "line1": [
                 "Saturday, October 9"
             ],
@@ -5959,7 +6027,7 @@
             ],
             "line_count": 5
         },
-        "280": {
+        "283": {
             "line1": [
                 "Twentieth Sunday after Pentecost"
             ],
@@ -5987,7 +6055,7 @@
             ],
             "line_count": 7
         },
-        "281": {
+        "284": {
             "line1": [
                 "Monday, October 11"
             ],
@@ -6007,7 +6075,7 @@
             ],
             "line_count": 5
         },
-        "282": {
+        "285": {
             "line1": [
                 "Tuesday, October 12"
             ],
@@ -6027,7 +6095,7 @@
             ],
             "line_count": 5
         },
-        "283": {
+        "286": {
             "line1": [
                 "Wednesday, October 13"
             ],
@@ -6047,28 +6115,47 @@
             ],
             "line_count": 5
         },
-        "284": {
-            "line1": "Thursday, October 14",
+        "287": {
+            "line1": [
+                "Thursday, October 14"
+            ],
             "line2": [
                 "Psalm 119:1-8",
                 "Ezekiel 20:30-21:17",
                 "James 2:1-13"
             ],
-            "line3": "Happy are those whose help is the God of Jacob, whose hope is in the Lord their God. Psalm 146:5",
-            "line4": "Stand firm, and you will win life. Luke 21:19",
-            "line5": "God of Jacob, our hope is also in you. Wonderful! Amen and amen. P.S. What does this \u201cstand firm\u201d look like? Just how taxing is that going to be?",
-            "line6": "Friday, October 15",
-            "line7": [
+            "line3": [
+                "Happy are those whose help is the God of Jacob, whose hope is in the Lord their God. Psalm 146:5"
+            ],
+            "line4": [
+                "Stand firm, and you will win life. Luke 21:19"
+            ],
+            "line5": [
+                "God of Jacob, our hope is also in you. Wonderful! Amen and amen. P.S. What does this \u201cstand firm\u201d look like? Just how taxing is that going to be?"
+            ],
+            "line_count": 5
+        },
+        "288": {
+            "line1": [
+                "Friday, October 15"
+            ],
+            "line2": [
                 "Psalm 119:9-16",
                 "Ezekiel 21:18-22:22",
                 "James 2:14-26"
             ],
-            "line8": "You shall not defraud your neighbor. Leviticus 19:13",
-            "line9": "Jesus said, \u201cDo to others as you would have them do to you.\u201d Luke 6:31",
-            "line10": "Jesus, sometimes you make things complicated, like when you say, \u201cDo to others as you would have them do to you.\u201d If I\u2019m going to stop defrauding my neighbor, I\u2019m going to need your help to even understand how I am participating in said behavior. Help! Amen.",
-            "line_count": 10
+            "line3": [
+                "You shall not defraud your neighbor. Leviticus 19:13"
+            ],
+            "line4": [
+                "Jesus said, \u201cDo to others as you would have them do to you.\u201d Luke 6:31"
+            ],
+            "line5": [
+                "Jesus, sometimes you make things complicated, like when you say, \u201cDo to others as you would have them do to you.\u201d If I\u2019m going to stop defrauding my neighbor, I\u2019m going to need your help to even understand how I am participating in said behavior. Help! Amen."
+            ],
+            "line_count": 5
         },
-        "285": {
+        "289": {
             "line1": [
                 "Saturday, October 16"
             ],
@@ -6088,7 +6175,7 @@
             ],
             "line_count": 5
         },
-        "286": {
+        "290": {
             "line1": [
                 "Twenty-First Sunday after Pentecost"
             ],
@@ -6116,7 +6203,7 @@
             ],
             "line_count": 7
         },
-        "287": {
+        "291": {
             "line1": [
                 "Monday, October 18"
             ],
@@ -6136,7 +6223,7 @@
             ],
             "line_count": 5
         },
-        "288": {
+        "292": {
             "line1": [
                 "Tuesday, October 19"
             ],
@@ -6156,7 +6243,7 @@
             ],
             "line_count": 5
         },
-        "289": {
+        "293": {
             "line1": [
                 "Wednesday, October 20"
             ],
@@ -6176,7 +6263,7 @@
             ],
             "line_count": 5
         },
-        "290": {
+        "294": {
             "line1": [
                 "Thursday, October 21"
             ],
@@ -6196,7 +6283,7 @@
             ],
             "line_count": 5
         },
-        "291": {
+        "295": {
             "line1": [
                 "Friday, October 22"
             ],
@@ -6216,7 +6303,7 @@
             ],
             "line_count": 5
         },
-        "292": {
+        "296": {
             "line1": [
                 "Saturday, October 23"
             ],
@@ -6236,7 +6323,7 @@
             ],
             "line_count": 5
         },
-        "293": {
+        "297": {
             "line1": [
                 "Twenty-Second Sunday after Pentecost"
             ],
@@ -6264,7 +6351,7 @@
             ],
             "line_count": 7
         },
-        "294": {
+        "298": {
             "line1": [
                 "Monday, October 25"
             ],
@@ -6284,7 +6371,7 @@
             ],
             "line_count": 5
         },
-        "295": {
+        "299": {
             "line1": [
                 "Tuesday, October 26"
             ],
@@ -6304,28 +6391,47 @@
             ],
             "line_count": 5
         },
-        "296": {
-            "line1": "Wednesday, October 27",
+        "300": {
+            "line1": [
+                "Wednesday, October 27"
+            ],
             "line2": [
                 "Psalm 119:89-96",
                 "Ezekiel 33:21-34:19",
                 "1 Peter 3:1-7"
             ],
-            "line3": "O magnify the Lord with me, and let us exalt his name together. Psalm 34:3",
-            "line4": "For in him every one of God\u2019s promises is a \u201cYes.\u201d For this reason it is through him that we say the \u201cAmen,\u201d to the glory of God. 2 Corinthians 1:20",
-            "line5": "We magnify you, Lord! We exalt your name together as we gather to share these Daily Texts across planet Earth. May our promises today evidence your \u201cYes.\u201d Amen, to the glory of God!",
-            "line6": "Thursday, October 28",
-            "line7": [
+            "line3": [
+                "O magnify the Lord with me, and let us exalt his name together. Psalm 34:3"
+            ],
+            "line4": [
+                "For in him every one of God\u2019s promises is a \u201cYes.\u201d For this reason it is through him that we say the \u201cAmen,\u201d to the glory of God. 2 Corinthians 1:20"
+            ],
+            "line5": [
+                "We magnify you, Lord! We exalt your name together as we gather to share these Daily Texts across planet Earth. May our promises today evidence your \u201cYes.\u201d Amen, to the glory of God!"
+            ],
+            "line_count": 5
+        },
+        "301": {
+            "line1": [
+                "Thursday, October 28"
+            ],
+            "line2": [
                 "Psalm 119:97-104",
                 "Ezekiel 34:20-36:7",
                 "1 Peter 3:8-22"
             ],
-            "line8": "Truly in the Lord our God is the salvation of Israel. Jeremiah 3:23",
-            "line9": "He told the crowd to sit down on the ground. Then he took the seven loaves and the fish, and when he had given thanks, he broke them and gave them to the disciples, and they in turn to the people. Matthew 15:35-36",
-            "line10": "Lord our God, you are our salvation. Take our \u201cloaves and fish,\u201d and when you have given thanks, break them. As your disciples remind us, these are not ours to keep to ourselves, but to bear as gifts to others. Amen.",
-            "line_count": 10
+            "line3": [
+                "Truly in the Lord our God is the salvation of Israel. Jeremiah 3:23"
+            ],
+            "line4": [
+                "He told the crowd to sit down on the ground. Then he took the seven loaves and the fish, and when he had given thanks, he broke them and gave them to the disciples, and they in turn to the people. Matthew 15:35-36"
+            ],
+            "line5": [
+                "Lord our God, you are our salvation. Take our \u201cloaves and fish,\u201d and when you have given thanks, break them. As your disciples remind us, these are not ours to keep to ourselves, but to bear as gifts to others. Amen."
+            ],
+            "line_count": 5
         },
-        "297": {
+        "302": {
             "line1": [
                 "Friday, October 29"
             ],
@@ -6345,7 +6451,7 @@
             ],
             "line_count": 5
         },
-        "298": {
+        "303": {
             "line1": [
                 "Saturday, October 30"
             ],
@@ -6365,7 +6471,7 @@
             ],
             "line_count": 5
         },
-        "299": {
+        "304": {
             "line1": [
                 "Twenty-Third Sunday after Pentecost"
             ],
@@ -6393,7 +6499,7 @@
             ],
             "line_count": 7
         },
-        "300": {
+        "305": {
             "line1": [
                 "All Saints\u2019 Day"
             ],
@@ -6429,7 +6535,7 @@
             ],
             "line_count": 9
         },
-        "301": {
+        "306": {
             "line1": [
                 "Tuesday, November 2"
             ],
@@ -6449,7 +6555,7 @@
             ],
             "line_count": 5
         },
-        "302": {
+        "307": {
             "line1": [
                 "Wednesday, November 3"
             ],
@@ -6469,7 +6575,7 @@
             ],
             "line_count": 5
         },
-        "303": {
+        "308": {
             "line1": [
                 "Thursday, November 4"
             ],
@@ -6489,7 +6595,7 @@
             ],
             "line_count": 5
         },
-        "304": {
+        "309": {
             "line1": [
                 "Friday, November 5"
             ],
@@ -6509,7 +6615,7 @@
             ],
             "line_count": 5
         },
-        "305": {
+        "310": {
             "line1": [
                 "Saturday, November 6"
             ],
@@ -6529,7 +6635,7 @@
             ],
             "line_count": 5
         },
-        "306": {
+        "311": {
             "line1": [
                 "Twenty-Fourth Sunday after Pentecost"
             ],
@@ -6557,7 +6663,7 @@
             ],
             "line_count": 7
         },
-        "307": {
+        "312": {
             "line1": [
                 "Monday, November 8"
             ],
@@ -6577,7 +6683,7 @@
             ],
             "line_count": 5
         },
-        "308": {
+        "313": {
             "line1": [
                 "Tuesday, November 9"
             ],
@@ -6597,7 +6703,7 @@
             ],
             "line_count": 5
         },
-        "309": {
+        "314": {
             "line1": [
                 "Wednesday, November 10"
             ],
@@ -6617,7 +6723,7 @@
             ],
             "line_count": 5
         },
-        "310": {
+        "315": {
             "line1": [
                 "Thursday, November 11"
             ],
@@ -6637,7 +6743,7 @@
             ],
             "line_count": 5
         },
-        "311": {
+        "316": {
             "line1": [
                 "Friday, November 12"
             ],
@@ -6657,7 +6763,7 @@
             ],
             "line_count": 5
         },
-        "312": {
+        "317": {
             "line1": [
                 "Chief Elder Festival"
             ],
@@ -6692,7 +6798,7 @@
             ],
             "line_count": 9
         },
-        "313": {
+        "318": {
             "line1": [
                 "Twenty-Fifth Sunday after Pentecost"
             ],
@@ -6720,7 +6826,7 @@
             ],
             "line_count": 7
         },
-        "314": {
+        "319": {
             "line1": [
                 "Monday, November 15"
             ],
@@ -6740,7 +6846,7 @@
             ],
             "line_count": 5
         },
-        "315": {
+        "320": {
             "line1": [
                 "Tuesday, November 16"
             ],
@@ -6760,7 +6866,7 @@
             ],
             "line_count": 5
         },
-        "316": {
+        "321": {
             "line1": [
                 "Wednesday, November 17"
             ],
@@ -6780,7 +6886,7 @@
             ],
             "line_count": 5
         },
-        "317": {
+        "322": {
             "line1": [
                 "Thursday, November 18"
             ],
@@ -6800,7 +6906,7 @@
             ],
             "line_count": 5
         },
-        "318": {
+        "323": {
             "line1": [
                 "Friday, November 19"
             ],
@@ -6820,7 +6926,7 @@
             ],
             "line_count": 5
         },
-        "319": {
+        "324": {
             "line1": [
                 "Saturday, November 20"
             ],
@@ -6840,7 +6946,7 @@
             ],
             "line_count": 5
         },
-        "320": {
+        "325": {
             "line1": [
                 "Reign of Christ Sunday"
             ],
@@ -6868,7 +6974,7 @@
             ],
             "line_count": 7
         },
-        "321": {
+        "326": {
             "line1": [
                 "Monday, November 22"
             ],
@@ -6888,7 +6994,7 @@
             ],
             "line_count": 5
         },
-        "322": {
+        "327": {
             "line1": [
                 "Tuesday, November 23"
             ],
@@ -6908,7 +7014,7 @@
             ],
             "line_count": 5
         },
-        "323": {
+        "328": {
             "line1": [
                 "Wednesday, November 24"
             ],
@@ -6928,7 +7034,7 @@
             ],
             "line_count": 5
         },
-        "324": {
+        "329": {
             "line1": [
                 "Thursday, November 25"
             ],
@@ -6948,7 +7054,7 @@
             ],
             "line_count": 5
         },
-        "325": {
+        "330": {
             "line1": [
                 "Friday, November 26"
             ],
@@ -6968,7 +7074,7 @@
             ],
             "line_count": 5
         },
-        "326": {
+        "331": {
             "line1": [
                 "Saturday, November 27"
             ],
@@ -6988,7 +7094,7 @@
             ],
             "line_count": 5
         },
-        "327": {
+        "332": {
             "line1": [
                 "First Sunday in Advent"
             ],
@@ -7016,7 +7122,7 @@
             ],
             "line_count": 7
         },
-        "328": {
+        "333": {
             "line1": [
                 "Monday, November 29"
             ],
@@ -7036,7 +7142,7 @@
             ],
             "line_count": 5
         },
-        "329": {
+        "334": {
             "line1": [
                 "Tuesday, November 30"
             ],
@@ -7056,7 +7162,7 @@
             ],
             "line_count": 5
         },
-        "330": {
+        "335": {
             "line1": [
                 "Wednesday, December 1"
             ],
@@ -7076,7 +7182,7 @@
             ],
             "line_count": 5
         },
-        "331": {
+        "336": {
             "line1": [
                 "Thursday, December 2"
             ],
@@ -7096,7 +7202,7 @@
             ],
             "line_count": 5
         },
-        "332": {
+        "337": {
             "line1": [
                 "Friday, December 3"
             ],
@@ -7116,7 +7222,7 @@
             ],
             "line_count": 5
         },
-        "333": {
+        "338": {
             "line1": [
                 "Saturday, December 4"
             ],
@@ -7136,7 +7242,7 @@
             ],
             "line_count": 5
         },
-        "334": {
+        "339": {
             "line1": [
                 "Second Sunday of Advent"
             ],
@@ -7164,7 +7270,7 @@
             ],
             "line_count": 7
         },
-        "335": {
+        "340": {
             "line1": [
                 "Monday, December 6"
             ],
@@ -7184,7 +7290,7 @@
             ],
             "line_count": 5
         },
-        "336": {
+        "341": {
             "line1": [
                 "Tuesday, December 7"
             ],
@@ -7204,7 +7310,7 @@
             ],
             "line_count": 5
         },
-        "337": {
+        "342": {
             "line1": [
                 "Wednesday, December 8"
             ],
@@ -7224,7 +7330,7 @@
             ],
             "line_count": 5
         },
-        "338": {
+        "343": {
             "line1": [
                 "Thursday, December 9"
             ],
@@ -7245,7 +7351,7 @@
             ],
             "line_count": 5
         },
-        "339": {
+        "344": {
             "line1": [
                 "Friday, December 10"
             ],
@@ -7265,7 +7371,7 @@
             ],
             "line_count": 5
         },
-        "340": {
+        "345": {
             "line1": [
                 "Saturday, December 11"
             ],
@@ -7285,7 +7391,7 @@
             ],
             "line_count": 5
         },
-        "341": {
+        "346": {
             "line1": [
                 "Third Sunday of Advent"
             ],
@@ -7313,7 +7419,7 @@
             ],
             "line_count": 7
         },
-        "342": {
+        "347": {
             "line1": [
                 "Monday, December 13"
             ],
@@ -7333,7 +7439,7 @@
             ],
             "line_count": 5
         },
-        "343": {
+        "348": {
             "line1": [
                 "Tuesday, December 14"
             ],
@@ -7353,7 +7459,7 @@
             ],
             "line_count": 5
         },
-        "344": {
+        "349": {
             "line1": [
                 "Wednesday, December 15"
             ],
@@ -7373,7 +7479,7 @@
             ],
             "line_count": 5
         },
-        "345": {
+        "350": {
             "line1": [
                 "Thursday, December 16"
             ],
@@ -7394,7 +7500,7 @@
             ],
             "line_count": 5
         },
-        "346": {
+        "351": {
             "line1": [
                 "Friday, December 17"
             ],
@@ -7414,7 +7520,7 @@
             ],
             "line_count": 5
         },
-        "347": {
+        "352": {
             "line1": [
                 "Saturday, December 18"
             ],
@@ -7434,7 +7540,7 @@
             ],
             "line_count": 5
         },
-        "348": {
+        "353": {
             "line1": [
                 "Fourth Sunday of Advent"
             ],
@@ -7462,7 +7568,7 @@
             ],
             "line_count": 7
         },
-        "349": {
+        "354": {
             "line1": [
                 "Monday, December 20"
             ],
@@ -7483,7 +7589,7 @@
             ],
             "line_count": 5
         },
-        "350": {
+        "355": {
             "line1": [
                 "Tuesday, December 21"
             ],
@@ -7503,7 +7609,7 @@
             ],
             "line_count": 5
         },
-        "351": {
+        "356": {
             "line1": [
                 "Wednesday, December 22"
             ],
@@ -7523,7 +7629,7 @@
             ],
             "line_count": 5
         },
-        "352": {
+        "357": {
             "line1": [
                 "Thursday, December 23"
             ],
@@ -7543,7 +7649,7 @@
             ],
             "line_count": 5
         },
-        "353": {
+        "358": {
             "line1": [
                 "Friday, December 24"
             ],
@@ -7563,7 +7669,7 @@
             ],
             "line_count": 5
         },
-        "354": {
+        "359": {
             "line1": [
                 "Nativity of the Lord (Christmas)"
             ],
@@ -7599,7 +7705,7 @@
             ],
             "line_count": 9
         },
-        "355": {
+        "360": {
             "line1": [
                 "First Sunday after Christmas"
             ],
@@ -7627,7 +7733,7 @@
             ],
             "line_count": 7
         },
-        "356": {
+        "361": {
             "line1": [
                 "Monday, December 27"
             ],
@@ -7647,7 +7753,7 @@
             ],
             "line_count": 5
         },
-        "357": {
+        "362": {
             "line1": [
                 "Tuesday, December 28"
             ],
@@ -7667,7 +7773,7 @@
             ],
             "line_count": 5
         },
-        "358": {
+        "363": {
             "line1": [
                 "Wednesday, December 29"
             ],
@@ -7687,7 +7793,7 @@
             ],
             "line_count": 5
         },
-        "359": {
+        "364": {
             "line1": [
                 "Thursday, December 30"
             ],
@@ -7707,7 +7813,7 @@
             ],
             "line_count": 5
         },
-        "360": {
+        "365": {
             "line1": [
                 "Friday, December 31"
             ],
@@ -7726,7 +7832,6 @@
                 "Most gracious God, we are blessed to complete another year in your love and mercy. Empower us to enter the new year with joy and confidence; may we be ambassadors of your grace and mercy in every good and holy way. Amen."
             ],
             "line_count": 5
-        },
-        "361": {}
+        }
     }
 }
