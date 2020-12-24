@@ -299,7 +299,7 @@ request.onload = function() {
     };
     
     //Hides the next button if current day is the last day in the last JSON file
-    if (defaults.day >= 366 && defaults.year == 2021){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Please account for leap year if needed. Todo
+    if (defaults.day >= 365 && defaults.year == 2021){ //This will need to be changed everytime a new year file is added. This will need to be changed after go live. Please account for leap year if needed. Todo
         document.getElementById("next").style.visibility = "hidden";
     } else {
         document.getElementById("next").style.visibility = "visible";
