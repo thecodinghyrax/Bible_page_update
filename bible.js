@@ -190,8 +190,6 @@ function nineLineDay(currentDayEntry){
     } else {
         sectionHeading(currentDayEntry["line2"][0]);
         textOnly(currentDayEntry["line2"][1]);
-        console.log(currentDayEntry["line2"]);
-        console.log(currentDayEntry["line2"].slice(1));
     }
     // Handeling line 4
     sectionHeading("Daily Scripture Lessions");
@@ -308,21 +306,23 @@ request.onload = function() {
     // Defines the funtion to advance to the next day entry 
     function next() {
         this.outerHTML = this.outerHTML;
-        if (defaults.day == 365 && defaults.year != 2016 && defaults.year != 2021){ //Please account for leap year if needed. Todo
+        if (defaults.day == 365 && defaults.year != 2016 && defaults.year != 2020){ //Please account for leap year if needed. Todo
             defaults.year = Number(defaults.year)
             defaults.year += 1;
             defaults.day = 1            
             console.log("The day of the year is now (non-leap year) = " + defaults.day);
             console.log("The year is now (non-leap year) = " + defaults.year);
-        } else if (defaults.day == 366 && defaults.year == 2016){ //Please account for leap year if needed. Todo
+        } else if (defaults.day == 366 && (defaults.year == 2016 || defaults.year == 2020)){ //Please account for leap year if needed. Todo
             defaults.year = Number(defaults.year)
             defaults.year += 1;
             defaults.day = 1;
             console.log("The day of the year is now (leap year) = " + defaults.day);
             console.log("The year is now (leap year) = " + defaults.year);
-        } else if (defaults.day >= 366 && defaults.year == 2020) { // This will need to be removed(?) next year and defaults.year == 2020 will need to move to the previous if line
-            // Do nothing. Exit the function?
-        } else {
+        } 
+        // else if (defaults.day >= 366 && defaults.year == 2020) { // This will need to be removed(?) next year and defaults.year == 2020 will need to move to the previous if line
+        //     // Do nothing. Exit the function?
+        // } 
+        else {
             defaults.day += 1;
             console.log("The day of the year is now (normal day) = " + defaults.day);
             console.log("The year is now (normal day) = " + defaults.year);
@@ -364,12 +364,12 @@ request.onload = function() {
     document.getElementById('next').onclick = next;
     document.getElementById('previous').onclick = previous;
     document.body.addEventListener("keyup", function(event) {
-        if (event.keyCode === 39) {            
+        if (event.code === "ArrowRight") {            
             event.preventDefault();
             this.outerHTML = this.outerHTML;
             next();
         } 
-        if (event.keyCode === 37){
+        if (event.code === "ArrowLeft"){
             event.preventDefault();
             this.outerHTML = this.outerHTML;
             previous();
